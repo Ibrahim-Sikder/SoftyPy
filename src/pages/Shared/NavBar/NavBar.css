@@ -1,0 +1,17 @@
+.menubar ul{
+    display: flex;
+    justify-content: space-center;
+    align-items: center;
+}
+.menubar ul li{
+    margin-right:30px;
+    font-size:16px;
+    font-weight:bold;
+    transition: all .5s ease-in-out;
+    border-width: 0px;
+}
+.menubar ul li:hover{
+    color:#F76300;
+    border-bottom: 1px solid #F76300;
+    border-width: 100%;
+}
