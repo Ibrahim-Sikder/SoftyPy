@@ -1,7 +1,13 @@
+import Banner from "../../components/Banner/Banner";
+import Services from "../../components/Srvices/Services";
+import WhoWeAre from "../../components/WhoWeAre/WhoWeAre";
+
 const Home = () => {
     return (
         <div>
-            <h3>This is home page </h3>
+         <Banner/>
+         <WhoWeAre/>
+         <Services/>
         </div>
     );
 };
