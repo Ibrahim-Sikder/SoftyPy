@@ -1,0 +1,24 @@
+.socialIcon{
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    background-color: red;
+    color:white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socialIcon:nth-child(1){
+    background-color: #355089 !important;
+}
+.socialIcon:nth-child(2){
+    background-color: #006BA3 !important;
+}
+.socialIcon:nth-child(3){
+    background-color: #fff !important;
+    color:#F76300;
+}
+.socialIcon:nth-child(4){
+    background-color: #B91D1C !important;
+}
