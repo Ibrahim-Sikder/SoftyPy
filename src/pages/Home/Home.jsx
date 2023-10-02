@@ -1,5 +1,6 @@
 import Banner from "../../components/Banner/Banner";
-import Services from "../../components/Srvices/Services";
+import Brand from "../../components/Brand/Brand";
+import Review from "../../components/Review/Review";
 import WhoWeAre from "../../components/WhoWeAre/WhoWeAre";
 
 const Home = () => {
@@ -7,7 +8,8 @@ const Home = () => {
         <div>
          <Banner/>
          <WhoWeAre/>
-         <Services/>
+         <Brand/>
+         <Review/>
         </div>
     );
 };

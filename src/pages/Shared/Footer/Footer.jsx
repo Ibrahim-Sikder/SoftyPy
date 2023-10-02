@@ -11,13 +11,13 @@ import {
 } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className="px-24 ">
-      <div className="flex justify-between">
+    <div className="footerWrap">
+      <div className="footerTop">
        <div>
        <p>	Pioneering Technologies for a Smarter Future </p>
         <p className="text-xl mt-2 font-bold text-[#F87015]">Here to Help, 24/7.</p>
        </div>
-        <div className="flex items-center">
+        <div className="flex items-center flex-wrap sm:mt-8">
           <div className="contact">
             <FaRegEnvelope className="mr-2 emalIcon" />
             <input autoComplete="off" type="text" placeholder="Email Address " />
@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="my-8" />
-      <div className="flex justify-between w-full  contactUs">
+      <div className="contactUs">
         <div>
           <div className="w-56 text-left">
             <img src={softypy} alt="softypy" />
@@ -96,14 +96,13 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr className="" />
-      <div className="flex items-center justify-between py-3">
-        <p>All Right reserve | SoftyPy - 2023 </p>
-        <div className="termCondition flex items-center justify-between"> 
+      <hr className="mt-5" />
+      <div className="copyRight py-3">
+        <p className="sm:mb-5">All Right reserve | SoftyPy - 2023 </p>
+        <div className="termCondition flex items-center justify-between flex-wrap "> 
             <p>Term & Conditions </p>
             <p>Privacy policy </p>
             <p>Cookies </p>
-            <p>Term & Conditions </p>
         </div>
       </div>
     </div>

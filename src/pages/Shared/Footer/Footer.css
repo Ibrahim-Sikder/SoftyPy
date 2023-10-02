@@ -1,3 +1,7 @@
+.footerWrap{
+    width:1300px;
+    margin:0 auto;
+}
 .contact{
     display: flex;
     justify-content: space-between;
@@ -6,6 +10,20 @@
     padding-left:5px;
     height: 50px;
     border-radius: 5px;
+}
+.contactUs{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.contactUs div{
+    margin-right:20px;
+}
+.footerTop{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+
 }
 .emalIcon{
     font-size: 25px !important;
@@ -41,4 +59,45 @@
 }
 .contactUs p:hover{
     border-bottom:1px solid red;
+}
+.copyRight{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media only screen and (max-width:1024px){
+    .footerWrap{
+        width: 100%;
+        padding: 0px 20px;
+    
+    }
+}
+
+
+@media only screen and (max-width:768px){
+    .footerTop{
+        display: flex;
+        justify-content:center
+    
+    }
+}
+
+@media only screen and (max-width:500px){
+    .contact {
+        margin-top:20px;
+        width: 100%;
+    }
+    .contactBtn {
+        width: 100%;
+         margin-left: 0px; 
+        margin-top: 5px;
+    }
+    .copyRight p{
+        font-size: 14px;
+    }
+    .copyRight {
+        display: block;
+    }
 }

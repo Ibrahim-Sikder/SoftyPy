@@ -3,6 +3,12 @@
     margin: 0 auto;
 
 }
+.ourGoal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
 .leftSide{
     width:50%;
     
@@ -18,4 +24,19 @@
 .rightside p{
     font-size: 16px;
     margin-bottom: 20px;
+}
+@media only screen and (max-width:1024px){
+    .whoWeareWrap{
+        width:100%;
+    }
+    .ourGoal{
+       flex-direction: column;;
+    
+    }
+    .rightside, .leftSide{
+        width:100%;
+    }
+    .rightside{
+        padding-left: 43px;
+}
 }

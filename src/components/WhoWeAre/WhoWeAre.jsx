@@ -4,7 +4,7 @@ import CommonButton from '../../pages/Shared/CommonButton/CommonButton';
 const WhoWeAre = () => {
     return (
         <div className='whoWeareWrap'>
-           <div className="flex items-center jusity-center">
+           <div className="ourGoal">
             <div className='leftSide'>
             <img src={img} alt="who we are " />
             </div>

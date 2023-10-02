@@ -7,7 +7,7 @@ import content from '../../../public/assets/content.jpg'
 import social from '../../../public/assets/social.jpg'
 import add from '../../../public/assets/adds.jpg'
 import './Services.css'
-import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+
 
 const Services = () => {
     const servicesData = [
@@ -61,7 +61,7 @@ const Services = () => {
          <div className="mb-10">
          <SectionTitle title='Our Services' text='We Have A Wide Array Of Services To Offer Our Clients. But We Can Generally Boil All Of Our Services Down Into Different Categories'></SectionTitle>
          </div>
-          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-10 ">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 ">
            {
             servicesData.map(service=> <div key={service.id} className="serviceBox mt-5 ">
             <img src={service.img} alt="web" />
@@ -75,21 +75,8 @@ const Services = () => {
           </div>
         </div>)
            }
-          </div> */}
+          </div>
 
-<Tabs>
-    <TabList>
-      <Tab>Title 1</Tab>
-      <Tab>Title 2</Tab>
-    </TabList>
-
-    <TabPanel>
-      <h2>Any content 1</h2>
-    </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
-  </Tabs>
         </div>
     );
 };

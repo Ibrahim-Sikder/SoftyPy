@@ -11,7 +11,7 @@ import "./TopBar.css";
 const TopBar = () => {
   return (
     <div className="bg-[#000000] text-white">
-      <div className="flex items-center justify-between h-[45px]  w-[1300px] mx-auto">
+      <div className="flex items-center justify-between topBar">
         <div className="flex items-center ">
         <div className="flex items-center justify-center">
           <FaHome className="text-[#F76300] mr-2 " />

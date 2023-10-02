@@ -1,3 +1,7 @@
+.navbar{
+    width:1300px;
+    height:80px;
+}
 .menubar ul{
     display: flex;
     justify-content: space-center;
@@ -15,3 +19,76 @@
     border-bottom: 1px solid #F76300;
     border-width: 100%;
 }
+
+.bar{
+    display: none;
+}
+
+
+@media only screen and (max-width:1024px){
+    .navbar{
+        width:100%;
+       
+    }
+    
+    
+    
+
+}
+@media only screen and (max-width:768px){
+    .menubar{
+        display: none;
+       }
+    .bar {
+        padding: 0px !important;
+        text-align: left !important;
+        width: 49px;
+        height: 46px;
+        line-height: 50px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all .5s linear(-0.47 -53.68%, 1 100%);
+        position: absolute;
+        top: 20px;
+        right: 10px;
+      }
+      .bar div{
+        position:relative;
+      
+      }
+      .bar span {
+        width: 30px;
+        height: 2px;
+        background: #FF5400;
+        margin-bottom: 6px;
+        display: block;
+        transition: all .5s linear(-0.47 -53.68%, 1 100%);
+      }
+      .bar1{
+        transform: rotate(-45deg);
+          position: absolute;
+          top: -2px;
+          left: -12px;
+          transition: all .5s linear(-0.47 -53.68%, 1 100%);
+      }
+      .bar2{
+        display: none;
+        position: absolute !important;
+        display: none !important;
+        transition: all .5s linear(-0.47 -53.68%, 1 100%);
+      }
+      .bar3{
+        transform: rotate(45deg);
+        position: absolute;
+        top: -2px;
+        right: -18px;
+        transition: all .5s linear(-0.47 -53.68%, 1 100%);
+      }
+    
+    
+
+}
+

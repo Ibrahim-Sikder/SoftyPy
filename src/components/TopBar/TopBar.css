@@ -1,3 +1,8 @@
+.topBar{
+    width:1300px;
+    height:45px;
+   margin:0 auto;
+}
 .socialIcon{
     width:30px;
     height:30px;
@@ -21,4 +26,14 @@
 }
 .socialIcon:nth-child(4){
     background-color: #B91D1C !important;
+}
+@media only screen and (max-width:1024px){
+    .topBar{
+        width:100%;
+    } 
+}
+@media only screen and (max-width:768px){
+    .topBar{
+      display: none;
+    } 
 }
