@@ -1,10 +1,11 @@
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import man from "../../../public/assets/man.avif";
+import man from "../../../public/assets/kamal.jpg";
 import man2 from "../../../public/assets/man2.webp";
 import man3 from "../../../public/assets/man3.png";
 import "./Review.css";
 import { FaQuoteLeft , FaArrowRight} from "react-icons/fa";
+import SectionTitle from "../../pages/Shared/SectionTitle/SectionTitle";
 
 function ThumbnailPlugin(mainRef) {
   return (slider) => {
@@ -56,6 +57,9 @@ export default function Review() {
 
   return (
     <div className="mb-16">
+     <div className="mb-24">
+     <SectionTitle title='What Our Client Say '></SectionTitle>
+     </div>
       <div className="reviewSliderWrap">
       <div ref={sliderRef} className="keen-slider keenSlider">
         <div className="keen-slider__slide number-slide1">

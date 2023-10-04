@@ -15,3 +15,10 @@ body{
 .css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded:first-of-type {
     border-left: 5px solid red !important;
 }
+.react-tabs__tab--selected {
+   border:2px solid #F87015 !important;
+}
+.react-tabs__tab-list {
+    border-bottom: 1px solid #F87015 !important;
+    margin-bottom: 70px !important;
+}

@@ -1,6 +1,7 @@
 import "./NavBar.css";
 import softypy from "../../../../public/assets/softypy.png";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const NavBar = () => {
     const [stickyMenu, setStickyMenu] = useState(false);
     const [mobileMenu, setMobileMenu] = useState(true);
@@ -18,15 +19,15 @@ const NavBar = () => {
     <div className="bg-white ">
       <div className="flex items-center justify-between navbar mx-auto ">
         <div className="w-52 ">
-          <img src={softypy} alt="softypy" />
+          <Link to='/'><img src={softypy} alt="softypy" /></Link>
         </div>
         <div className="menubar">
           <ul>
-            <li>Home</li>
-            <li>Services</li>
+          <Link to='/'> <li>Home</li></Link>
+           <Link to='/services'> <li>Services</li></Link>
+           <Link to='/portfolio'> <li>Portfolio</li></Link>
             <li>Happy Clients </li>
             <li>Products</li>
-            <li>About Us</li>
             <li>Contact Us </li>
           </ul>
         </div>
