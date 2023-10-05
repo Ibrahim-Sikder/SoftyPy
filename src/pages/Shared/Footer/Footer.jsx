@@ -13,14 +13,20 @@ const Footer = () => {
   return (
     <div className="footerWrap">
       <div className="footerTop">
-       <div>
-       <p>	Pioneering Technologies for a Smarter Future </p>
-        <p className="text-xl mt-2 font-bold text-[#F87015]">Here to Help, 24/7.</p>
-       </div>
+        <div>
+          <p> Pioneering Technologies for a Smarter Future </p>
+          <p className="text-xl mt-2 font-bold text-[#F87015]">
+            Here to Help, 24/7.
+          </p>
+        </div>
         <div className="flex items-center flex-wrap sm:mt-8">
           <div className="contact">
             <FaRegEnvelope className="mr-2 emalIcon" />
-            <input autoComplete="off" type="text" placeholder="Email Address " />
+            <input
+              autoComplete="off"
+              type="text"
+              placeholder="Email Address "
+            />
           </div>
           <div className="contactBtn">
             <button className="mr-2">Request Now </button>
@@ -33,11 +39,13 @@ const Footer = () => {
         <div>
           <div className="w-56 text-left">
             <img src={softypy} alt="softypy" />
-            <p className="mt-3">42, Gulshan Avenue, Gulshan-1, Jabbar Tower (3rd Floor), Dhaka-1212, Bangladesh</p>
+            <p className="mt-3">
+              42, Gulshan Avenue, Gulshan-1, Jabbar Tower (3rd Floor),
+              Dhaka-1212, Bangladesh
+            </p>
           </div>
-         
         </div>
-        <div className="services">
+        <div>
           <h3 className="text-xl font-bold text-[#FF5400] mb-3">Services </h3>
           <p> Digital Marketing Strategy</p>
           <p>Social Media Marketing</p>
@@ -99,10 +107,10 @@ const Footer = () => {
       <hr className="mt-5" />
       <div className="copyRight py-3">
         <p className="sm:mb-5">All Right reserve | SoftyPy - 2023 </p>
-        <div className="termCondition flex items-center justify-between flex-wrap "> 
-            <p>Term & Conditions </p>
-            <p>Privacy policy </p>
-            <p>Cookies </p>
+        <div className="termCondition flex items-center justify-between flex-wrap ">
+          <p>Term & Conditions </p>
+          <p>Privacy policy </p>
+          <p>Cookies </p>
         </div>
       </div>
     </div>
