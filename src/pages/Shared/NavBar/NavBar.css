@@ -13,13 +13,26 @@
     font-weight:bold;
     transition: all .5s ease-in-out;
     border-width: 0px;
-}
-.menubar ul li:hover{
-    color:#F76300;
-    border-bottom: 1px solid #F76300;
-    border-width: 100%;
+    position: relative;
 }
 
+.menubar ul li::after{
+ content: '';
+ position: absolute;
+ width:0px;
+ height: 1px;
+ background-color: #F76300;
+ left: 0;
+ bottom: 0;;
+ transition: all .5s ease-in-out;
+}
+.menubar ul li:hover::after{
+  width:100%;
+}
+.menubar ul li:hover{
+  width:100%;
+  color: #F76300;
+}
 .bar{
     display: none;
 }

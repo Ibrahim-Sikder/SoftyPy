@@ -26,9 +26,8 @@ const NavBar = () => {
           <Link to='/'> <li>Home</li></Link>
            <Link to='/services'> <li>Services</li></Link>
            <Link to='/portfolio'> <li>Portfolio</li></Link>
-            <li>Happy Clients </li>
-            <li>Products</li>
-            <li>Contact Us </li>
+           <Link to='/client'>   <li>Happy Clients </li></Link>
+           <Link to='/contact'>   <li>Contact Us  </li></Link>
           </ul>
         </div>
         <div onClick={toggleMobileMenu} className='bar'>

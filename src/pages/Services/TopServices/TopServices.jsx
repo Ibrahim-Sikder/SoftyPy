@@ -24,17 +24,8 @@ export default Arrow = () => {
     import("@lottiefiles/lottie-player");
   });
 
-  const [services, setServices] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/services")
-      .then((res) => res.json())
-      .then((data) => setServices(data));
-  });
-
   return (
     <>
-  
       <main className="topServicesWrap">
         <div>
           <div className="relatedServiceHead mb-10 mt-8">
@@ -43,46 +34,137 @@ export default Arrow = () => {
         </div>
 
         <div className="navigation-wrapper">
-          
           <div ref={sliderRef} className="keen-slider">
-           
             <div className="keen-slider__slide number-slide1">
-            <div className="flex items-center justify-between ">
-              <div className="topServicesLeft">
-                <lottie-player
-                  id="firstLottie"
-                  ref={ref}
-                  autoplay
-                  loop
-                  mode="normal"
-                  src="/development2.json"
-                  className="animation"
-                ></lottie-player>
-              </div>
-              
-              <div className="topServiceRight">
-                <h2 className="text-4xl font-bold">
-                  Web Design & Development{" "}
-                </h2>
-                <p className="my-3 leading-7">
-                  {" "}
-                  Web Designers are responsible for designing and building the
-                  interface, navigation and aesthetic of websites for
-                  businesses and clients. Likely working in the IT team of an
-                  organisation or for a digital design agency that services
-                  clients, Web Designers should possess a range of skills and
-                  qualities.
-                </p>
-                
-                <div className="flex items-center cursor-pointer">
-                  <span>Learn More </span>
-                  <FaArrowRight className="ml-2 text-[#F87015] " />
+              <div className="flex items-center justify-between ">
+                <div className="topServicesLeft">
+                  <lottie-player
+                    id="firstLottie"
+                    ref={ref}
+                    autoplay
+                    loop
+                    mode="normal"
+                    src="/development2.json"
+                    className="animation"
+                  ></lottie-player>
+                </div>
+
+                <div className="topServiceRight">
+                  <h2 className="text-4xl font-bold">
+                    Web Design & Development{" "}
+                  </h2>
+                  <p className="my-3 leading-7">
+                    {" "}
+                    Web Designers are responsible for designing and building the
+                    interface, navigation and aesthetic of websites for
+                    businesses and clients. Likely working in the IT team of an
+                    organisation or for a digital design agency that services
+                    clients, Web Designers should possess a range of skills and
+                    qualities.
+                  </p>
+
+                  <div className="flex items-center cursor-pointer">
+                    <span>Learn More </span>
+                    <FaArrowRight className="ml-2 text-[#F87015] " />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-           
-            
+            <div className="keen-slider__slide number-slide2">
+              <div className="flex items-center justify-between ">
+                <div className="topServicesLeft">
+                  <lottie-player
+                    id="firstLottie"
+                    ref={ref}
+                    autoplay
+                    loop
+                    mode="normal"
+                    src="/digital.json"
+                    className="animation"
+                  ></lottie-player>
+                </div>
+
+                <div className="topServiceRight">
+                  <h2 className="text-4xl font-bold">
+                  Digital Marketing Strategy​​
+                  </h2>
+                  <p className="my-3 leading-7">
+                    {" "}
+                    Web Designers are responsible for designing and building the
+                    interface, navigation and aesthetic of websites for
+                    businesses and clients. Likely working in the IT team of an
+                    organisation or for a digital design agency that services
+                    clients, Web Designers should possess a range of skills and
+                    qualities.
+                  </p>
+
+                  <div className="flex items-center cursor-pointer">
+                    <span>Learn More </span>
+                    <FaArrowRight className="ml-2 text-[#F87015] " />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide3">
+              <div className="flex items-center justify-between ">
+                <div className="topServicesLeft">
+                  <lottie-player
+                    id="firstLottie"
+                    ref={ref}
+                    autoplay
+                    loop
+                    mode="normal"
+                    src="/digital2.json"
+                    className="animation"
+                  ></lottie-player>
+                </div>
+
+                <div className="topServiceRight">
+                  <h2 className="text-4xl font-bold">
+                  Social Media​​ Marketing
+                  </h2>
+                  <p className="my-3 leading-7">
+                    {" "}
+                    SoftyPy Digitla Marketing Agency classifies your business goals & executes competitor by follow social media strategy.
+                  </p>
+
+                  <div className="flex items-center cursor-pointer">
+                    <span>Learn More </span>
+                    <FaArrowRight className="ml-2 text-[#F87015] " />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide3">
+              <div className="flex items-center justify-between ">
+                <div className="topServicesLeft">
+                  <lottie-player
+                    id="firstLottie"
+                    ref={ref}
+                    autoplay
+                    loop
+                    mode="normal"
+                    src="/content.json"
+                    className="animation"
+                  ></lottie-player>
+                </div>
+
+                <div className="topServiceRight">
+                  <h2 className="text-4xl font-bold">
+                  Content Marketing​
+                  </h2>
+                  <p className="my-3 leading-7">
+                    {" "}
+                    SoftyPy is the best content marketing agency in the world. We have a professionals team for content marketing
+                  </p>
+
+                  <div className="flex items-center cursor-pointer">
+                    <span>Learn More </span>
+                    <FaArrowRight className="ml-2 text-[#F87015] " />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           {loaded && instanceRef.current && (
             <div className="arrowWrap">

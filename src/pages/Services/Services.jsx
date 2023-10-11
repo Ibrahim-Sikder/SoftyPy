@@ -1,11 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import "./Services.css";
 import responsive from "../../../public/assets/dev.png";
-import web from "../../../public/assets/web.jpg";
-import social from "../../../public/assets/ecommerce.png";
-import content from "../../../public/assets/content.jpg";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
-import { FaQuoteLeft, FaArrowRight, FaLocationArrow } from "react-icons/fa";
+import {  FaArrowRight,  } from "react-icons/fa";
 import { useRef, useEffect } from "react";
 import TopServices from "./TopServices/TopServices";
 const Services = () => {
@@ -16,29 +13,7 @@ const Services = () => {
     import("@lottiefiles/lottie-player");
   });
 
-  const datas = [
-    {
-      id: 1,
-      name: "Website Design & Development",
-      title:
-        "SoftyPy, We have a practical solution for best Custom WordPress Website Design and Development services in the world.",
-      img: web,
-    },
-    {
-      id: 1,
-      name: "Website Design & Development",
-      title:
-        "SoftyPy, We have a practical solution for best Custom WordPress Website Design and Development services in the world.",
-      img: content,
-    },
-    {
-      id: 1,
-      name: "Website Design & Development",
-      title:
-        "SoftyPy, We have a practical solution for best Custom WordPress Website Design and Development services in the world.",
-      img: social,
-    },
-  ];
+
 
   const services = useLoaderData();
   console.log(services);
@@ -276,17 +251,7 @@ const Services = () => {
                 className="animation"
               ></lottie-player>
             </div>
-          </div>
-{/* 
-          <div className="relatedServices">
-            <div>
-              <div className="relatedServiceHead mb-10">
-                <h2 className="text-3xl md:text-5xl">Our Top Services</h2>
-              </div>
-            </div>
-          
-          </div> */}
-          
+          </div> 
           <TopServices/>
         </div>
       </div>

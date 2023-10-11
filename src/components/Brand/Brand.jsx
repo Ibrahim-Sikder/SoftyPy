@@ -8,6 +8,7 @@ import brand6 from '../../../public/assets/brand5.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import SectionTitle from '../../pages/Shared/SectionTitle/SectionTitle'
 const Brand = () => {
     var settings = {
         infinite: true,
@@ -46,6 +47,7 @@ const Brand = () => {
       };
     return (
         <div className='brandWrap'>
+          <SectionTitle title='Our Happy Clients '></SectionTitle>
               <Slider {...settings}>
                 <div className='slider'>
                     <img src={brand} alt="brand" />
