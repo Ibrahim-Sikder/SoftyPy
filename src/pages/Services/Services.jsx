@@ -5,11 +5,7 @@ import web from "../../../public/assets/web.jpg";
 import social from "../../../public/assets/ecommerce.png";
 import content from "../../../public/assets/content.jpg";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
-
 import { FaQuoteLeft, FaArrowRight, FaLocationArrow } from "react-icons/fa";
-
-
-
 import { useRef, useEffect } from "react";
 import TopServices from "./TopServices/TopServices";
 const Services = () => {
@@ -268,6 +264,7 @@ const Services = () => {
                 better for humans?
               </p>
             </div>
+
             <div className="productRightSide">
               <lottie-player
                 id="firstLottie"
@@ -280,28 +277,17 @@ const Services = () => {
               ></lottie-player>
             </div>
           </div>
-
+{/* 
           <div className="relatedServices">
             <div>
               <div className="relatedServiceHead mb-10">
                 <h2 className="text-3xl md:text-5xl">Our Top Services</h2>
               </div>
             </div>
-            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center">
-              {datas.map((data) => (
-                <div key={data.id} className="singleRelatedService">
-                  <img src={data.img} alt="ecommerce" />
-                  <h3 className="text-2xl font-bold">{data.name}</h3>
-                  <p className="my-3"> {data.title}</p>
-                  <div className="flex items-center">
-                    <button>Learn More </button>
-                    <FaArrowRight className="ml-2" />
-                  </div>
-                </div>
-              ))}
-            </div> */}
-              <TopServices/>
-          </div>
+          
+          </div> */}
+          
+          <TopServices/>
         </div>
       </div>
     </div>

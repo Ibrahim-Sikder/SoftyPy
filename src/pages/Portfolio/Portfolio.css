@@ -9,7 +9,7 @@
     margin: 0 auto;
     text-align: center;
 }
-.portfolio{
+/* .portfolio{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,14 +17,16 @@
    
    
    
-}
+} */
 .singlePortfolio{
-    width: 300px;
+    width: 420px;
     aspect-ratio: 1/1;
     background-position: top;
     margin-right: 10px;
-    transition:all .8s ease-in-out;
+    transition: all .8s cubic-bezier(0,0,1,.99);
     position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
    
 }
 .singlePortfolio:hover{
@@ -36,15 +38,15 @@
     background-size: cover;
 }
 .portfolio2{
-    background: url(/public/assets/solutya.png);
+    background: url(/public/assets/NextStair.png);
     background-size: cover;
 }
 .portfolio3{
-    background: url(/public/assets/solutya.png);
+    background: url(/public/assets/Arkaxis.png);
     background-size: cover;
 }
 .portfolio4{
-    background: url(/public/assets/ghuronti.png);
+    background: url(/public/assets/AirTrips.png);
     background-size: cover;
 }
 .portfolio5{
@@ -61,12 +63,78 @@
     background-size: cover;
 }
 
+.portfolio8{
+    background: url(/public/assets/Bus.png);
+    background-size: cover;
+}
+
+.portfolio9{
+    background: url(/public/assets/Flight.png);
+    background-size: cover;
+}
+
+.portfolio10{
+    background: url(/public/assets/Umrah.png);
+    background-size: cover;
+}
+.portfolio11{
+    background: url(/public/assets/Home-Havenly.png);
+    background-size: cover;
+}
+
+
+.portfolio12{
+    background: url(/public/assets/Agency-Website.png);
+    background-size: cover;
+}
+
+.portfolio13{
+    background: url(/public/assets/landing.png);
+    background-size: cover;
+}
+.portfolio14{
+    background: url(/public/assets/Hospital-Website.png);
+    background-size: cover;
+}
+.portfolio15{
+    background: url(/public/assets/shop.png);
+    background-size: cover;
+}
+.portfolio16{
+    background: url(/public/assets/shop2.png);
+    background-size: cover;
+}
+.portfolio17{
+    background: url(/public/assets/shop3.png);
+    background-size: cover;
+}
+.portfolio18{
+    background: url(/public/assets/shop4.png);
+    background-size: cover;
+}
+
+
+
 
 
 
 @media only screen and (max-width:1024px){
     .portfolioWrap{
         width:100%;
+    }
+    .singlePortfolio {
+        width: 330px;
+    }
+    
+}
+@media only screen and (max-width:768px){
+    .singlePortfolio {
+        width:700px;
+    }
+    
+}@media only screen and (max-width:500px){
+    .singlePortfolio {
+        width:350px;
     }
     
 }

@@ -1,84 +1,141 @@
-import React, { useState } from "react"
-import { useKeenSlider } from "keen-slider/react"
-import "keen-slider/keen-slider.min.css"
-import "./TopServices.css"
-import { FaLocationArrow } from "react-icons/fa";
-import template from '../../../../public/assets/template.png'
-export default () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [loaded, setLoaded] = useState(false)
+/* eslint-disable react/display-name */
+import React, { useState } from "react";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import "./TopServices.css";
+import { FaLocationArrow, FaArrowRight } from "react-icons/fa";
+import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+export default Arrow = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
     slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
+      setCurrentSlide(slider.track.details.rel);
     },
     created() {
-      setLoaded(true)
+      setLoaded(true);
     },
-  })
+  });
+
+  const ref = useRef(null);
+  useEffect(() => {
+    import("@lottiefiles/lottie-player");
+  });
+
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/services")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  });
 
   return (
     <>
-      <div className="navigation-wrapper">
-        <div ref={sliderRef} className="keen-slider">
-          <div className="keen-slider__slide number-slide1">
-                <div className="flex items-center justify-between ">
-                    <div className="topServiceContent">
-                        <img src={template} alt="" />
-                    </div>
-                    <div className="topServiceRight"> 
-                        <h2 className="text-4xl font-bold">Web Design & Development </h2>
-                        <p> Web Designers are responsible for designing and building the interface, navigation and aesthetic of websites for businesses and clients. Likely working in the IT team of an organisation or for a digital design agency that services clients, Web Designers should possess a range of skills and qualities.</p>
-                    </div>
-                </div>
+  
+      <main className="topServicesWrap">
+        <div>
+          <div className="relatedServiceHead mb-10 mt-8">
+            <h2 className="text-3xl md:text-5xl">Our Top Services</h2>
           </div>
+        </div>
+
+        <div className="navigation-wrapper">
           
+          <div ref={sliderRef} className="keen-slider">
+           
+            <div className="keen-slider__slide number-slide1">
+            <div className="flex items-center justify-between ">
+              <div className="topServicesLeft">
+                <lottie-player
+                  id="firstLottie"
+                  ref={ref}
+                  autoplay
+                  loop
+                  mode="normal"
+                  src="/development2.json"
+                  className="animation"
+                ></lottie-player>
+              </div>
+              
+              <div className="topServiceRight">
+                <h2 className="text-4xl font-bold">
+                  Web Design & Development{" "}
+                </h2>
+                <p className="my-3 leading-7">
+                  {" "}
+                  Web Designers are responsible for designing and building the
+                  interface, navigation and aesthetic of websites for
+                  businesses and clients. Likely working in the IT team of an
+                  organisation or for a digital design agency that services
+                  clients, Web Designers should possess a range of skills and
+                  qualities.
+                </p>
+                
+                <div className="flex items-center cursor-pointer">
+                  <span>Learn More </span>
+                  <FaArrowRight className="ml-2 text-[#F87015] " />
+                </div>
+              </div>
+            </div>
+          </div>
+           
+            
+          </div>
+          {loaded && instanceRef.current && (
+            <div className="arrowWrap">
+              <div className="leftArrow">
+                <FaLocationArrow
+                  className="leftArrowIcon"
+                  left
+                  onClick={(e) =>
+                    e.stopPropagation() || instanceRef.current?.prev()
+                  }
+                  disabled={currentSlide === 0}
+                />
+              </div>
+
+              <div className="rightArrow">
+                <FaLocationArrow
+                  className="rightArrowIcon"
+                  onClick={(e) =>
+                    e.stopPropagation() || instanceRef.current?.next()
+                  }
+                  disabled={
+                    currentSlide ===
+                    instanceRef.current.track.details.slides.length - 1
+                  }
+                />
+              </div>
+            </div>
+          )}
         </div>
         {loaded && instanceRef.current && (
-          <div className="arrowWrap">
-            <FaLocationArrow
-              left
-              onClick={(e) =>
-                e.stopPropagation() || instanceRef.current?.prev()
-              }
-              disabled={currentSlide === 0}
-            />
-
-            <FaLocationArrow
-              onClick={(e) =>
-                e.stopPropagation() || instanceRef.current?.next()
-              }
-              disabled={
-                currentSlide ===
-                instanceRef.current.track.details.slides.length - 1
-              }
-            />
+          <div className="dots">
+            {[
+              ...Array(instanceRef.current.track.details.slides.length).keys(),
+            ].map((idx) => {
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    instanceRef.current?.moveToIdx(idx);
+                  }}
+                  className={"dot" + (currentSlide === idx ? " active" : "")}
+                ></button>
+              );
+            })}
           </div>
         )}
-      </div>
-      {loaded && instanceRef.current && (
-        <div className="dots">
-          {[
-            ...Array(instanceRef.current.track.details.slides.length).keys(),
-          ].map((idx) => {
-            return (
-              <button
-                key={idx}
-                onClick={() => {
-                  instanceRef.current?.moveToIdx(idx)
-                }}
-                className={"dot" + (currentSlide === idx ? " active" : "")}
-              ></button>
-            )
-          })}
-        </div>
-      )}
+      </main>
     </>
-  )
-}
+  );
+};
 
 function Arrow(props) {
-  const disabeld = props.disabled ? " arrow--disabled" : ""
+  const disabeld = props.disabled ? " arrow--disabled" : "";
   return (
     <svg
       onClick={props.onClick}
@@ -95,5 +152,5 @@ function Arrow(props) {
         <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
       )}
     </svg>
-  )
+  );
 }

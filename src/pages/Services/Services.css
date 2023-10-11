@@ -167,11 +167,6 @@
     object-fit: cover;
     height: 250px;
 }
-.relatedServiceHead h2{
-    border-bottom: 3px solid red;
-    width:400px;
-    padding-bottom:10px;
-}
 
 
 
@@ -259,9 +254,7 @@
         width: 340px;
         overflow: hidden;
     }
-    .relatedServiceHead h2 {
-        width: 100%;
-    }
+  
 }
 
 
