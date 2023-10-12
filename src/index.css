@@ -18,7 +18,32 @@ body{
 .react-tabs__tab--selected {
    border:2px solid #F87015 !important;
 }
+.react-tabs__tab--selected::after{
+    position:absolute;
+    width:40px;
+    height:40px;
+    background:red;
+
+ }
 .react-tabs__tab-list {
     border-bottom: 1px solid #F87015 !important;
     margin-bottom: 70px !important;
+}
+.css-10d9dml-MuiTabs-indicator {
+    background-color: #951FE8 !important;
+    height: 100% !important;
+}
+
+
+@media only screen and (max-width:768px){
+    .css-lfwcke-MuiTabs-flexContainer {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+}
+@media only screen and (max-width:500px){
+    .css-lfwcke-MuiTabs-flexContainer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }

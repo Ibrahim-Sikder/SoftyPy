@@ -4,9 +4,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import SectionTitle from "../../pages/Shared/SectionTitle/SectionTitle";
-import get from "../../../public/assets/get.webp";
 import implementation from "../../../public/assets/implementation.avif";
-import result from "../../../public/assets/result.webp";
 import plan from "../../../public/assets/plan.jpg";
 import plan2 from "../../../public/assets/plane.avif";
 import { FaStreetView,FaEnvelopeOpenText,FaPhoneVolume ,FaRecycle,FaSpellCheck,FaCheckDouble} from "react-icons/fa";
@@ -47,7 +45,7 @@ const Work = () => {
           iconStyle={{ background: "#F87015", color: "#fff" }}
           icon={<FaPhoneVolume />}
         >
-          <img src={get} alt="result" />
+          <img src={plan} alt="result" />
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"

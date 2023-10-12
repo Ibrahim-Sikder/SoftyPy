@@ -5,7 +5,11 @@ import "keen-slider/keen-slider.min.css";
 import "./TopServices.css";
 import { FaLocationArrow, FaArrowRight } from "react-icons/fa";
 import { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
+
 export default Arrow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
@@ -28,12 +32,12 @@ export default Arrow = () => {
     <>
       <main className="topServicesWrap">
         <div>
-          <div className="relatedServiceHead mb-10 mt-8">
+          <div data-aos="fade-up" className="relatedServiceHead mb-10 mt-8">
             <h2 className="text-3xl md:text-5xl">Our Top Services</h2>
           </div>
         </div>
 
-        <div className="navigation-wrapper">
+        <div data-aos="fade-up-left" className="navigation-wrapper">
           <div ref={sliderRef} className="keen-slider">
             <div className="keen-slider__slide number-slide1">
               <div className="flex items-center justify-between ">

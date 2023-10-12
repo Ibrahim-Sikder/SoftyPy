@@ -1,0 +1,115 @@
+.choosWrap{
+    width:1300px;
+    margin:0 auto;
+}
+.technologies{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.boxWrap{
+    display: flex;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    transform-style: preserve-3d;
+    margin:50px 0;
+}
+.container .box{
+    position: relative;
+    width: 385px;
+    height: 300px;
+    background-color: #951FE8;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius:20px;
+}
+.container .box:hover{
+    box-shadow: 0 50px 80px rgba(0,0,0, .2);
+}
+
+
+.container .box .imgBx{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+
+}
+.container .box .contentBx{
+    position:absolute;
+    top:50%;
+    left:50px;
+    right:50px;
+    background:#fff;
+    transform:translateZ(20px) scaleY(0);
+    padding: 40px 25px;
+    transform-origin: top;
+    transition: .5s;
+    transform-style: preserve-3d;
+   border-radius: 20px;
+    box-shadow: #F87015 0px 5px 15px;
+}
+.container .box:hover .contentBx{
+       transform:translateZ(20px) scaleY(1);
+}
+.boxContent{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.category li small{
+    font-size: 18px !important;
+    margin-bottom:10px;
+}
+.checkIcon{
+    color:#F87015 !important;
+    font-size: 22px !important;
+}
+.technologyRightSide{
+    width:45%;
+}
+.tabs{
+   display: flex !important;
+   justify-content: center !important;
+   align-items: center !important;
+}
+@media only screen and (max-width:1024px){
+    .choosWrap{
+        width:100%;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .technologies {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .technologyRightSide {
+        width: 100%;
+        margin-top: -100px;
+    }
+    .boxWrap {
+        display: block;
+    }
+}
+@media only screen and (max-width:500px){
+    .boxWrap{
+        display: block;
+    }
+    .technologyRightSide {
+        margin-top: -40px;
+    }
+
+}
+

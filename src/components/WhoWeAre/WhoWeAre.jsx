@@ -1,14 +1,17 @@
 import './WhoWeare.css'
 import img from '../../../public/assets/support2.avif'
 import CommonButton from '../../pages/Shared/CommonButton/CommonButton';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 const WhoWeAre = () => {
     return (
         <div className='whoWeareWrap'>
            <div className="ourGoal">
-            <div className='leftSide'>
+            <div className='leftSide' data-aos="fade-right">
             <img src={img} alt="who we are " />
             </div>
-            <div className="rightside">
+            <div className="rightside" data-aos="fade-left">
                 <h2 className="text-4xl mb-3 text-[#F87015] font-bold">Who We Are?</h2>
                 <p>At SOFTYPY, we are a team of innovative and results-driven digital marketing experts. We believe that a strong online presence is essential for businesses of all sizes to succeed in today’s fast-paced digital world.</p>
                 <p>Founded in 2016, our agency has helped countless clients achieve their marketing goals and drive growth through customized, data-driven strategies. From website design and development to SEO, PPC, and social media marketing, we offer a comprehensive suite of services to help our clients reach their target audience and succeed online.
