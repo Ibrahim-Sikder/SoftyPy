@@ -35,10 +35,10 @@ const Portfolio = () => {
             <Tab>News Portal </Tab>
             <Tab>Corporate </Tab>
             <Tab>Real Estate </Tab>
-            <Tab>Construction </Tab>
+            <Tab>Education </Tab>
           </TabList>
           <TabPanel>
-            <div className="portfolio grid grid-cols-1 lg:grid-cols-3 place-items-center">
+            <div className="portfolio grid grid-cols-1 lg:grid-cols-2 place-items-center">
               <Link >
                 <div className="singlePortfolio portfolio1">
                   <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
@@ -140,7 +140,7 @@ const Portfolio = () => {
             </div>
           </TabPanel>
           <TabPanel>
-          <div className="portfolio grid grid-cols-1 lg:grid-cols-3 place-items-center">
+          <div className="portfolio grid grid-cols-1 lg:grid-cols-2 place-items-center">
           <Link to='https://www.crateandbarrel.com/'>
                 <div className="singlePortfolio portfolio16">
                   <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
@@ -172,7 +172,7 @@ const Portfolio = () => {
             </div>
           </TabPanel>
           <TabPanel>
-          <div className="portfolio grid grid-cols-1 lg:grid-cols-3 place-items-center">
+          <div className="portfolio grid grid-cols-1 lg:grid-cols-2 place-items-center">
               
               <Link to="https://www.ghuronti.com/hotel">
                 <div className="singlePortfolio portfolio1">
@@ -213,7 +213,7 @@ const Portfolio = () => {
             </div>
           </TabPanel>
           <TabPanel>
-         <div className="portfolio grid grid-cols-1 lg:grid-cols-3 place-items-center">
+         <div className="portfolio grid grid-cols-1 lg:grid-cols-2 place-items-center">
          <Link to='https://nextstair.com/'>
                 <div className="singlePortfolio portfolio2">
                   <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
@@ -232,7 +232,7 @@ const Portfolio = () => {
 
           </TabPanel>
           <TabPanel>
-          <div className="portfolio grid grid-cols-1 lg:grid-cols-3 place-items-center">
+          <div className="portfolio grid grid-cols-1 lg:grid-cols-2 place-items-center">
          <Link to='https://nextstair.com/'>
                 <div className="singlePortfolio portfolio2">
                   <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
@@ -250,7 +250,7 @@ const Portfolio = () => {
          </div>
           </TabPanel>
           <TabPanel>
-          <div className="portfolio grid grid-cols-1 lg:grid-cols-3 place-items-center">
+          <div className="portfolio grid grid-cols-1 lg:grid-cols-2 place-items-center">
          <Link to='https://nextstair.com/'>
                 <div className="singlePortfolio portfolio2">
                   <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
@@ -268,7 +268,7 @@ const Portfolio = () => {
          </div>
           </TabPanel>
           <TabPanel>
-            <h3>Tab items 7</h3>
+            <h3 className="text-4xl font-bold text-center">Education Website </h3>
           </TabPanel>
         </Tabs>
       </div>

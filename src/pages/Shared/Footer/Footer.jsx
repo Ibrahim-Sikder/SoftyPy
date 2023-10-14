@@ -9,18 +9,21 @@ import {
   FaInstagramSquare,
   FaYoutube,
 } from "react-icons/fa";
+import laptop from '../../../../public/assets/laptop.png'
 const Footer = () => {
   return (
     <div className="footerWrap">
       <div className="footerTop">
-        <div>
-          <p> Pioneering Technologies for a Smarter Future </p>
-          <p className="text-xl mt-2 font-bold text-[#F87015]">
-            Here to Help, 24/7.
+       <div className="footerTopBarContent">
+       <div className="leftSideContent">
+       <div >
+          <p className="text-2xl mt-2 font-bold">
+          Empowering Your Business with SoftyPy Technology
           </p>
+          <p className="my-2">SoftyPy is your digital navigator, expertly charting the course for your IT voyage. As a trusted IT solutions provider, we craft bespoke software, steer your network to smooth waters, guard your cybersecurity like a fortress, and keep your hardware shipshape. We are not just a compass; we are your guiding star in the digital realm.</p>
         </div>
-        <div className="flex items-center flex-wrap sm:mt-8">
-          <div className="contact">
+        <div className="flex contaact items-center flex-wrap sm:mt-8">
+          <div className="requestDemo">
             <FaRegEnvelope className="mr-2 emalIcon" />
             <input
               autoComplete="off"
@@ -33,6 +36,11 @@ const Footer = () => {
             <FaArrowRight />
           </div>
         </div>
+       </div>
+       <div className="rightSideImgWRap">
+        <img src={laptop} alt="laptop" />
+       </div>
+       </div>
       </div>
       <hr className="my-8" />
       <div className="contactUs">

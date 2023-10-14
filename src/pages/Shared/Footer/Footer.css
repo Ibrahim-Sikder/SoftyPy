@@ -17,27 +17,70 @@
     flex-wrap:wrap;
 }
 
-.footerTop{
+    .footerTop {
+        padding: 0px 25px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        border-radius: 5px;
+        box-shadow: #951FE8 0px 1px 6px;
+}
+/* .footerTop:after{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    content: "";
+    z-index: 1;
+    opacity: .8;
+} */
+.footerTopBarContent{
+    z-index: 99;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+.leftSideContent{
+    flex-basis: 700px;
+}
+.requestDemo{
+    display: flex;
+    border: 1px solid #F87015;
+    padding: 10px;
+    border-radius: 3px;
 
 }
+.requestDemo input{
+    background-color: transparent;
+    height: 100%;
+}
+.rightSideImgWRap img{
+    position: relative;
+    top:-45px;
+}
+
 .emalIcon{
     font-size: 25px !important;
-    color: #FF6700;
+    color: #F87015;
 }
 .contactBtn{
     display: flex;
     align-items: center;
-    background: #F87015;
+    background: #951FE8;
     width: 200px;
     height: 50px;
     padding-left: 5px;
     color: white;
     border: 1px solid #fff;
-    margin-left:10px;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .contact input:focus{
     outline: none;

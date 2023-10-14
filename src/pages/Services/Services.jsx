@@ -62,6 +62,9 @@ const Services = () => {
             <img src={responsive} alt="device" />
           </div>
         </div>
+       <div className="my-10">
+       <TopServices/>
+       </div>
         <div className="ourServices my-14">
           <div className="mb-8">
             <SectionTitle
@@ -69,7 +72,8 @@ const Services = () => {
               text="“Web design is not just about creating pretty layouts. It's about understanding the marketing challenge behind your business.”"
             ></SectionTitle>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <div className="card">
               <div className="inner-box">
                 <div className="card-front card-front5">
@@ -251,7 +255,7 @@ const Services = () => {
               ></lottie-player>
             </div>
           </div> 
-          <TopServices/>
+         
         </div>
       </div>
     </div>

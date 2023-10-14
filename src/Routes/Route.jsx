@@ -6,6 +6,7 @@ import Portfolio from "../pages/Portfolio/Portfolio";
 import About from "../pages/About/About";
 import Client from "../pages/Client/Client";
 import Contact from "../pages/Contact/Contact";
+import SingleService from "../pages/SingleService/SingleService";
 
 
 
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
         {
           path: '/contact',
           element: <Contact/>
+        },
+        {
+          path: '/singleService',
+          element: <SingleService/>
         }
       ]
     },

@@ -7,8 +7,8 @@ import { FaLocationArrow, FaArrowRight } from "react-icons/fa";
 import { useRef, useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from "react-router-dom";
 AOS.init();
-
 
 export default Arrow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -102,10 +102,12 @@ export default Arrow = () => {
                     qualities.
                   </p>
 
-                  <div className="flex items-center cursor-pointer">
+                  <Link to='/services'>
+                 <div className="flex items-center cursor-pointer">
                     <span>Learn More </span>
                     <FaArrowRight className="ml-2 text-[#F87015] " />
                   </div>
+                 </Link>
                 </div>
               </div>
             </div>
@@ -131,11 +133,12 @@ export default Arrow = () => {
                     {" "}
                     SoftyPy Digitla Marketing Agency classifies your business goals & executes competitor by follow social media strategy.
                   </p>
-
-                  <div className="flex items-center cursor-pointer">
+                  <Link to='/services'>
+                 <div className="flex items-center cursor-pointer">
                     <span>Learn More </span>
                     <FaArrowRight className="ml-2 text-[#F87015] " />
                   </div>
+                 </Link>
                 </div>
               </div>
             </div>
@@ -162,10 +165,12 @@ export default Arrow = () => {
                     SoftyPy is the best content marketing agency in the world. We have a professionals team for content marketing
                   </p>
 
-                  <div className="flex items-center cursor-pointer">
+                 <Link to='/services'>
+                 <div className="flex items-center cursor-pointer">
                     <span>Learn More </span>
                     <FaArrowRight className="ml-2 text-[#F87015] " />
                   </div>
+                 </Link>
                 </div>
               </div>
             </div>

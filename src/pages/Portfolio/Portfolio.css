@@ -19,11 +19,13 @@
    
 } */
 .singlePortfolio{
-    width: 420px;
-    aspect-ratio: 1/1;
+    width: 630px;
+   aspect-ratio: 1/1;
     background-position: top;
     margin-right: 10px;
-    transition: all .8s cubic-bezier(0,0,1,.99);
+    transition-duration: 17s;
+    transition-delay: 0s;
+    transition-property: all ;
     position: relative;
     margin-right: 10px;
     margin-left: 10px;

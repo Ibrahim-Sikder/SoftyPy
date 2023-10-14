@@ -10,8 +10,8 @@
     width: 50%;
     animation: movedown 1s linear forwards;
     opacity: 0;
-    /* box-shadow: #F87015 0px 5px 15px; */
     border:1px dashed;
+    margin:0px 0px !important;
    
   }
   .container:nth-child(1) {
@@ -52,12 +52,16 @@
     left: 0;
     border-top-left-radius: 170px;
     border-bottom-left-radius: 27px;
+    border: 1px dashed;
+    border-right: none;
 
   }
   .rightContainer {
     left: 50%;
     border-top-right-radius: 170px;
      border-bottom-right-radius: 27px;
+     border: 1px dashed;
+     border-left: none;
 
   }
   .container span {
