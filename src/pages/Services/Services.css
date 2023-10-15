@@ -265,4 +265,7 @@
     .whatWeDo h2 {
         font-size: 54px;
     }
+    .servicesContent {
+        top: -47px;
+    }
 }

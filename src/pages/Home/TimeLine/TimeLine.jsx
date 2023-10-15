@@ -2,7 +2,7 @@ import "./TimeLine.css";
 import {
   FaStreetView,
   FaEnvelopeOpenText,
-    FaRecycle,
+  FaRecycle,
   FaSpellCheck,
   FaCheckDouble,
   FaProjectDiagram,
@@ -14,8 +14,8 @@ import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 import plan2 from "../../../../public/assets/working.png";
 import testing from "../../../../public/assets/testing.png";
 import review from "../../../../public/assets/review.png";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 AOS.init();
 const TimeLine = () => {
   return (

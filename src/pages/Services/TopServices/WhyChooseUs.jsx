@@ -8,6 +8,7 @@ import { useRef, useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from "react-router-dom";
+import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 AOS.init();
 
 export default Arrow = () => {
@@ -32,9 +33,7 @@ export default Arrow = () => {
     <>
       <main className="topServicesWrap">
         <div>
-          <div data-aos="fade-up" className="relatedServiceHead mb-10 mt-8">
-            <h2 className="text-3xl md:text-5xl">Our Top Services</h2>
-          </div>
+         <SectionTitle title='Why Choose Us'></SectionTitle>
         </div>
 
         <div data-aos="fade-up-left" className="navigation-wrapper">

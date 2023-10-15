@@ -1,13 +1,29 @@
 import "./SingleService.css";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+import { Link } from "react-router-dom";
 import WhyChoosSe from "../Home/ChoosUs/WhyChoosSe";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import Products from "../../components/MoreProducts/Products";
 AOS.init();
 
 const SingleService = () => {
+  const [checked, setChecked] = useState([1]);
+  const [tabIndex, setTabIndex] = useState(0);
+  const handleToggle = (value) => () => {
+    const currentIndex = checked.indexOf(value);
+    const newChecked = [...checked];
+
+    if (currentIndex === -1) {
+      newChecked.push(value);
+    } else {
+      newChecked.splice(currentIndex, 1);
+    }
+    setChecked(newChecked);
+  };
   const ref = useRef(null);
   useEffect(() => {
     import("@lottiefiles/lottie-player");
@@ -95,16 +111,353 @@ const SingleService = () => {
           </div>
         </div>
         <div className="my-10">
-        <SectionTitle
-            title="Our More Products "
-          ></SectionTitle>
-          <Products/>
-       
+          <SectionTitle title="Our More Products "></SectionTitle>
+          <Products />
+        </div>
+        <div className="my-10">
+          <SectionTitle className='portfolioTitle' title="Some Of Our Work Portfolio " text=' "At SoftyPy, we deliver reliable IT solutions. Our portfolio highlights our expertise in problem-solving, system optimization, and exceptional customer service, ensuring your business is success."'></SectionTitle>
+          <div className="mt-16 mb-24">
+            <Tabs
+              className="tabWrap"
+              defaultTabIndex={tabIndex}
+              onSelect={(index) => setTabIndex(index)}
+            >
+              <TabList>
+                <Tab>All </Tab>
+                <Tab>E-Commerce</Tab>
+                <Tab>Travel Agency </Tab>
+                <Tab>News Portal </Tab>
+                <Tab>Corporate </Tab>
+                <Tab>Real Estate </Tab>
+                <Tab>Education </Tab>
+              </TabList>
+              <TabPanel>
+                <div className="portfolio grid grid-cols-1 md:grid-cols-3 place-items-center">
+                  <Link>
+                    <div className="singlePortfolio singleServicePortFolio portfolio1">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://nextstair.com/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio2">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">NextStair</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://arkaxis.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio3">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Arkaxis Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://airtrips.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio4">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Airtrips </h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio5">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Animate</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio6">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </TabPanel>
+              <TabPanel>
+                <div className="portfolio grid grid-cols-1 md:grid-cols-3 place-items-center">
+                  <Link>
+                    <div className="singlePortfolio singleServicePortFolio portfolio1">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://nextstair.com/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio2">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">NextStair</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://arkaxis.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio3">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Arkaxis Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://airtrips.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio4">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Airtrips </h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio5">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Animate</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio6">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </TabPanel>
+              <TabPanel>
+                <div className="portfolio grid grid-cols-1 md:grid-cols-3 place-items-center">
+                  <Link>
+                    <div className="singlePortfolio singleServicePortFolio portfolio1">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://nextstair.com/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio2">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">NextStair</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://arkaxis.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio3">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Arkaxis Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://airtrips.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio4">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Airtrips </h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio5">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Animate</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio6">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </TabPanel>
+              <TabPanel>
+                <div className="portfolio grid grid-cols-1 md:grid-cols-3 place-items-center">
+                  <Link>
+                    <div className="singlePortfolio singleServicePortFolio portfolio1">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://nextstair.com/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio2">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">NextStair</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://arkaxis.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio3">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Arkaxis Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://airtrips.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio4">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Airtrips </h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio5">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Animate</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio6">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </TabPanel>
+              <TabPanel>
+                <div className="portfolio grid grid-cols-1 md:grid-cols-3 place-items-center">
+                  <Link>
+                    <div className="singlePortfolio singleServicePortFolio portfolio1">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://nextstair.com/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio2">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">NextStair</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://arkaxis.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio3">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Arkaxis Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://airtrips.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio4">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Airtrips </h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio5">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Animate</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio6">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </TabPanel>
+              <TabPanel>
+                <div className="portfolio grid grid-cols-1 md:grid-cols-3 place-items-center">
+                  <Link>
+                    <div className="singlePortfolio singleServicePortFolio portfolio1">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://nextstair.com/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio2">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">NextStair</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://arkaxis.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio3">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Arkaxis Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://airtrips.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio4">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Airtrips </h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio5">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Animate</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio6">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </TabPanel>
+              <TabPanel>
+                <div className="portfolio grid grid-cols-1 md:grid-cols-3 place-items-center">
+                  <Link>
+                    <div className="singlePortfolio singleServicePortFolio portfolio1">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://nextstair.com/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio2">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">NextStair</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://arkaxis.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio3">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Arkaxis Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://airtrips.net/">
+                    <div className="singlePortfolio singleServicePortFolio portfolio4">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Airtrips </h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio5">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Animate</h2>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to="https://www.ghuronti.com/hotel">
+                    <div className="singlePortfolio singleServicePortFolio portfolio6">
+                      <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">
+                        <h2 className="text-xl">Ghuronti Travels Ltd</h2>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </TabPanel>
+            </Tabs>
+          </div>
         </div>
         <div className="mt-16">
-          <SectionTitle
-            title="Why Choose SoftyPy For Your Software Solution?"
-          ></SectionTitle>
+          <SectionTitle title="Why Choose SoftyPy For Your Software Solution?"></SectionTitle>
           <div className="my-10">
             <WhyChoosSe />
           </div>

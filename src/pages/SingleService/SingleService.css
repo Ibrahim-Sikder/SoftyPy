@@ -48,6 +48,13 @@
 .rightSide{
    width:650px;
 }
+.singleServicePortFolio{
+    width:400px !important;
+    margin-bottom:30px; 
+}
+.portfolioTitle{
+    width:1000px !important;
+}
 
 @media only screen and (max-width:1024px){
     .ecommerServices{

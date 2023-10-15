@@ -9,15 +9,6 @@
     margin: 0 auto;
     text-align: center;
 }
-/* .portfolio{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-   
-   
-   
-} */
 .singlePortfolio{
     width: 630px;
    aspect-ratio: 1/1;

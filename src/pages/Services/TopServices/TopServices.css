@@ -1,6 +1,14 @@
+
+
 .topServicesWrap{
     width:1300px;
     margin:0 auto;
+}
+.topServices{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 .animation{
     width:100%;
@@ -65,13 +73,40 @@
     padding-bottom:10px;
 }
 
-@media only screen and (max-width:1300px){
+@media only screen and (max-width:1024px){
     .topServicesWrap{
-        width:100%;
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 86px;
+    
     }
+    
 }
 @media only screen and (max-width:768px){
     .relatedServiceHead h2 {
         width: 100%;
+    }
+    .topServices {
+        flex-direction: column;
+    }
+    .topServiceContent, .topServiceRight {
+        width: 100%;
+    }
+    .arrowWrap {
+        margin-top: 38px;
+    }
+    .arrowWrap {
+        display: flex;
+        margin-left: 22px;
+        margin-top: 27px;
+        cursor: pointer;
+        z-index: 99;
+        position: relative;
+    }
+}
+@media only screen and (max-width:500px){
+    .arrowWrap {
+        margin-left: 22px;
+        margin-top: 27px;
     }
 }
