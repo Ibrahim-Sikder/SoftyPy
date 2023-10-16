@@ -2,17 +2,14 @@ import { useLoaderData } from "react-router-dom";
 import "./Services.css";
 import responsive from "../../../public/assets/dev.png";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
-import {  FaArrowRight,  } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { useRef, useEffect } from "react";
 import TopServices from "./TopServices/TopServices";
 const Services = () => {
-
   const ref = useRef(null);
   useEffect(() => {
     import("@lottiefiles/lottie-player");
   });
-
-
 
   const services = useLoaderData();
   console.log(services);
@@ -62,9 +59,9 @@ const Services = () => {
             <img src={responsive} alt="device" />
           </div>
         </div>
-       <div className="my-10">
-       <TopServices/>
-       </div>
+        <div className="my-10">
+          <TopServices />
+        </div>
         <div className="ourServices my-14">
           <div className="mb-8">
             <SectionTitle
@@ -254,8 +251,7 @@ const Services = () => {
                 className="animation"
               ></lottie-player>
             </div>
-          </div> 
-         
+          </div>
         </div>
       </div>
     </div>

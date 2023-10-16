@@ -1,0 +1,117 @@
+.servicesWraps{
+    width:1300px;
+    margin:0 auto;
+    margin-bottom: 100px;
+}
+.ourServicesWrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    margin: 70px 0;
+}
+.cards{
+    width: 270px;
+    height: 220px;
+    margin: 10px auto;
+    perspective: 1000px;
+    cursor: pointer;
+    transition: all .5s ease;
+    transform-style: preserve-3d;
+    margin-right: 10px;
+    margin-left: 10px;
+   
+
+}
+.inner-box{
+    position: relative;
+    width:100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 10px;
+    transition:transform 1s;
+    transform-style: preserve-3d;
+
+}
+.cards-front, .cards-back{
+    position:absolute;
+    width:100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+.cards-front{
+    background-size: cover;
+    background-position: center;
+    background:white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.cards .cards-back-content, .cards-front{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+ }
+ .cards-back{
+     background-color: #F87015;
+     transform: rotateY(180deg);
+     
+ }
+ 
+ .cards:hover .inner-box{
+     transform: rotateY(-180deg);
+ }
+ .iconWrap{
+    width: 88px;
+    margin: 0px auto;
+    margin-top:50px;
+    text-align: center;
+ }
+ .iconWrap img{
+width:100%;
+height: 100%;
+object-fit: cover;
+ }
+ .ourServicesRightSide{
+    position: relative;
+ }
+ .ourServicesRightSide::before{
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    content: '';
+    background-color: #EBF7EB;
+    left: -5px;
+    top: -63px;
+    z-index: -3;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    animation: move 5s linear infinite;
+ }
+ @keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-200px);
+    }
+    
+ }
+
+ @media only screen and (max-width:1024px){
+    .servicesWraps{
+        width:100%;
+    }
+    .ourServicesWrap {
+        grid-template-columns: auto;
+    }
+    .ourServiceLeftSide {
+        width: 600px;
+        margin-bottom: 28px;
+        text-align: center;
+    }
+ }
+ @media only screen and (maax-width:500px){
+    .ourServiceLeftSide {
+        width: 100%;
+    }
+ }
