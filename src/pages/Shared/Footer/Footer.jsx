@@ -10,6 +10,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import laptop from '../../../../public/assets/laptop.png'
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footerWrap">
@@ -37,9 +38,9 @@ const Footer = () => {
           </div>
         </div>
        </div>
-       <div className="rightSideImgWRap">
+       <Link to='/'><div className="rightSideImgWRap">
         <img src={laptop} alt="laptop" />
-       </div>
+       </div></Link>
        </div>
       </div>
       <hr className="my-8" />
@@ -54,12 +55,12 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h3 className="text-xl font-bold text-[#FF5400] mb-3">Services </h3>
+          <h3 className="text-xl font-bold text-[#FF5400] mb-3">Services </h3>        
+          <p>Website Design and Development</p>
           <p> Digital Marketing Strategy</p>
           <p>Social Media Marketing</p>
           <p>Search Engine Optimization</p>
           <p>Content Marketing</p>
-          <p>Website Design and Development</p>
           <p>PPC</p>
         </div>
         <div>
@@ -69,14 +70,14 @@ const Footer = () => {
           <p>SoftyPy Digital Margeting </p>
         </div>
         <div>
-          <h3 className="text-xl font-bold text-[#FF5400] mb-3">About Us </h3>
+         <Link to='/about'> <h3 className="text-xl font-bold text-[#FF5400] mb-3">About Us </h3></Link>
           <p>Happy Client</p>
           <p>About SoftyPy </p>
           <p>Blog </p>
         </div>
 
         <div>
-          <h3 className="text-xl font-bold text-[#FF5400] mb-3">Contact Us </h3>
+         <Link to='/contact'> <h3 className="text-xl font-bold text-[#FF5400] mb-3">Contact Us </h3></Link>
 
           <div className="flex items-center">
             <FaPhoneAlt />

@@ -5,6 +5,7 @@ import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import { FaArrowRight } from "react-icons/fa";
 import { useRef, useEffect } from "react";
 import TopServices from "./TopServices/TopServices";
+import BoostSection from "../../components/BostSection/BoostSection";
 const Services = () => {
   const ref = useRef(null);
   useEffect(() => {
@@ -254,6 +255,7 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <BoostSection/>
     </div>
   );
 };

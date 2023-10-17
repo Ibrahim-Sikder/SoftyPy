@@ -109,7 +109,7 @@
     padding-top: 45px;
     position: relative;
   }
-  .line {
+  .contactLine {
     background: #FF5502;
     width: 2px !important;
     height: 55px;
@@ -157,7 +157,7 @@
   .contacSocialIcon {
     width: 50px;
     height: 50px;
-    line-height: 50px;
+    contactLine-height: 50px;
     background: #19abe3;
     border-radius: 50%;
     text-align: center;

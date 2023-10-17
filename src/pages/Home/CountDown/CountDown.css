@@ -1,0 +1,53 @@
+.portFolioExample{
+    width:1300px;
+    margin:150px auto;
+}
+.countDownWrap{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    margin-bottom: 120px;
+    gap: 20px;
+}
+.countdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 300px;
+    aspect-ratio: 1/1;
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+.singleCountDown{
+    display: flex;
+    color: #951FE8;
+    font-size: 100px;
+    font-weight: bold;
+
+}
+
+@media only screen and (max-width:1024px){
+    .portFolioExample {
+        width: 100%;
+    }
+    .countDownWrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+        margin-bottom: 120px;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media only screen and (max-width:768px){
+    .countDownWrap {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (max-width:768px){
+    .countDownWrap {
+        grid-template-columns: auto;
+    }
+}

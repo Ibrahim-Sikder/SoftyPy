@@ -29,11 +29,6 @@
 }
 @media only screen and (max-width:1024px){
     .topBar{
-        width:100%;
-    } 
-}
-@media only screen and (max-width:768px){
-    .topBar{
-      display: none;
+        display: none;
     } 
 }

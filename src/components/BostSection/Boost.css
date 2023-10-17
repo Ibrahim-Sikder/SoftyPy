@@ -29,6 +29,9 @@
     .boostSection{
         width:100%;
     }
+    .boostSectionLeft {
+        padding-left: 30px;
+    }
 }
 
 @media only screen and (max-width:768px){
@@ -38,5 +41,13 @@
     .boostSectionLeft{
         width: 100%;
         padding-left: 50px;
+    }
+    .boostRightSide {
+        display: none;
+    }
+}
+@media only screen and (max-width:500px){
+    .boostSectionLeft{
+        padding-left: 20px;
     }
 }

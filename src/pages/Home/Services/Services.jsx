@@ -1,50 +1,44 @@
 import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 import icon from "../../../../public/assets/icon6.png";
+import icon2 from "../../../../public/assets/icon3.png";
+import icon3 from "../../../../public/assets/icon8.png";
+import icon4 from "../../../../public/assets/icon9.png";
+import icon5 from "../../../../public/assets/icon10.png";
 
 import "./Services.css";
+
 const Services = () => {
   const cardData = [
     {
       id: 1,
       img: icon,
-      name: "Web Development",
-      desc:'SoftyPy, We have a practical solution for best Custom WordPress Website Design and Development services in the world.'
+      name: "Web & APP Development",
+      desc:"SoftyPy specializes in crafting dynamic websites and innovative mobile apps, delivering a seamless user experience and digital solutions tailored to your needs."
     },
     {
-      id: 1,
-      img: icon,
-      name: "App Development",
-      desc: 'Developing innovative and native mobile Apps for Android, iOS, BlackBerry, and Windows platforms.'
+      id: 2,
+      img: icon2,
+      name: "ERP Solutions",
+      desc: "ERP Solutions optimize business operations through integrated software, fostering efficiency and informed decision-making for sustained growth."
+    },
+    
+    {
+      id: 3,
+      img: icon5,
+      name: "UI/UX Design ​",
+      desc: "At SoftyPy, we craft exceptional UI/UX designs that harmonize aesthetics and functionality, ensuring delightful user experiences for your digital products."
     },
     {
-      id: 1,
-      img: icon,
+      id: 4,
+      img: icon3,
       name: "Digital Marketing",
-      desc: 'Amazing results start with amazing strategies. We’ve worked with the top companies in the world. Many of them used us specifically for strategy!'
+      desc:"SoftyPy drives business growth with data-driven digital marketing strategies, elevating your online presence and engaging target audiences for lasting results."
     },
     {
-      id: 1,
-      img: icon,
-      name: "Social Media​​ Marketing",
-      desc: 'SoftyPy Digitla Marketing Agency classifies your business goals & executes competitor by follow social media strategy.'
-    },
-    {
-      id: 1,
-      img: icon,
-      name: "Content Marketing​",
-      desc: 'SoftyPy is the best content marketing agency in the world. We have a professionals team for content marketing'
-    },
-    {
-      id: 1,
-      img: icon,
+      id: 5,
+      img: icon4,
       name: "SEO ",
       desc: 'SoftyPy SEO services can build your high rankings and achieving your organic traffic & improve search engine result.'
-    },
-    {
-      id: 1,
-      img: icon,
-      name: "PPC",
-      desc: 'SoftyPy as experts in the world wide in internet campaign and advertising for your business by use Pay Per Click advertising strategy.'
     },
     
   ];
@@ -72,23 +66,22 @@ const Services = () => {
         </div>
         <div className="ourServicesRightSide">
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="cardsWrap">
               {cardData.map((card) => (
-                <div key={card.id} className="cards ">
+                <div key={card.id} className="cards">
                   <div className="inner-box">
                     <div className="cards-front cards-front5">
                       <div className="iconWrap">
-                        <img src={icon} alt="icon" />
+                        <img src={card.img} alt="icon" />
                       </div>
-                      <p className="mt-2">Web Development</p>
+                      <p className="mt-2 font-bold">{card.name}</p>
                     </div>
                     <div className="cards-back text-white">
                       <div className="cards-back-content px-3">
-                        <h4 className="text-xl "> Web Development</h4>
-                        <p className="my-3">
-                          Decorate an attractive website that represents all the
-                          traveling scopes both.
-                        </p>
+                        <b className="block"> {card.name}</b>
+                        <small className="my-3">
+                         {card.desc}
+                        </small>
                       </div>
                     </div>
                   </div>

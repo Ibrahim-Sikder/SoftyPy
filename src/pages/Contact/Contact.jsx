@@ -90,7 +90,7 @@ const Contact = () => {
                         <strong>+880 1762-380594</strong>
                    </div>
                 </div>
-                <div className='line'></div>
+                <div className='contactLine'></div>
                 <div className="flex items-center">
                 <FaEnvelope className='contactIcon' />
                    <div className="ml-2">
