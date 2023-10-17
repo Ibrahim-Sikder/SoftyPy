@@ -57,8 +57,8 @@
 .thumbnail{
     width: 350px !important;
     display: flex !important;
-  
     float: right;
+    margin-top: -16px !important;
 }
 .keenSlider{
     width:1200px;

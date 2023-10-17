@@ -1,7 +1,5 @@
-import React, { Component } from "react";
+import  { Component } from "react";
 import "./CountDown.css";
-import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
-
 class PortfolioCountdown extends Component {
   constructor(props) {
     super(props);

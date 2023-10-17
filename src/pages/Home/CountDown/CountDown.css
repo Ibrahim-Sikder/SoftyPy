@@ -1,6 +1,6 @@
 .portFolioExample{
     width:1300px;
-    margin:150px auto;
+    margin:95px auto;
 }
 .countDownWrap{
     display: grid;
@@ -34,20 +34,36 @@
         width: 100%;
     }
     .countDownWrap {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        place-items: center;
-        margin-bottom: 120px;
-        grid-template-columns: repeat(3,1fr);
+        gap: 1px;
+        padding: 0 5px;
+    }
+    .countdown {
+        width: 220px;
+    }
+    .singleCountDown {
+        font-size: 80px;
     }
 }
 @media only screen and (max-width:768px){
     .countDownWrap {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap:15px;
+    }
+    .singleCountDown {
+        display: flex;
+        color: #951FE8;
+        font-size: 70px;
+        font-weight: bold;
     }
 }
-@media only screen and (max-width:768px){
+@media only screen and (max-width:500px){
     .countDownWrap {
-        grid-template-columns: auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .countdown {
+        width: 150px;
+    }
+    .singleCountDown {
+        font-size: 50px;
     }
 }

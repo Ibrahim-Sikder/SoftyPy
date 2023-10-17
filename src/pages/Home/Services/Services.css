@@ -114,33 +114,41 @@ object-fit: cover;
 
  @media only screen and (max-width:1024px){
     .servicesWraps{
-        width:100%;
+        width: 100%;
+        padding: 0 30px;
     }
+    .ourServiceLeftSide {
+        width: 100%;
+        margin-bottom: 28px;
+    }
+ }
+ @media only screen and (max-width:768px){
     .ourServicesWrap {
         grid-template-columns: auto;
     }
-    .ourServiceLeftSide {
-        width: 600px;
-        margin-bottom: 28px;
-        text-align: center;
-    }
  }
+
  @media only screen and (max-width:500px){
     .ourServiceLeftSide {
         width: 100%;
     }
-    .cardsWrap {
-        grid-template-columns: auto;
+    .iconWrap {
+        width: 50px;
+        margin: 0px auto;
+        margin-top: 25px;
+        text-align: center;
     }
-    .cards:nth-child(2), .cards:nth-child(4){
-        position: initial;
+    .iconWrap p{
+        font-size: 12px !important;
+        color:red;
+    }
+    .cards {
+        width: 150px;
+        height: 142px;
     }
  
  }
  @media only screen and (max-width: 375px){
-.ourServiceLeftSide {
-    padding-left: 20px;
-}
 .titleWrap {
     padding-left: 20px;
 }

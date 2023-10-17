@@ -12,8 +12,8 @@
     border-radius: 5px;
 }
 .contactUs{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex: repeat(4, 1fr);
     justify-content: space-between;
 }
 
@@ -28,13 +28,13 @@
 .footerTopBarContent{
     z-index: 99;
     display: grid;
-    justify-content: space-between;
     align-items: center;
     position: relative;
     grid-template-columns: 8fr 4fr;
-    padding: 30px 0;
     place-content: space-between;
     place-items: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 .requestDemo{
     display: flex;
@@ -50,12 +50,15 @@
 
 .rightSideImgWRap img{
     position: relative;
-    top:-45px;
+    top:-65px;
 }
 
 .emalIcon{
     font-size: 25px !important;
     color: #F87015;
+}
+.twiteer:nth-child(3){
+    background:red !important;
 }
 .contactBtn{
     display: flex;
@@ -87,9 +90,6 @@
     margin-bottom:10px;
     transition:all .5s ease-in-out;
 }
-.contactUs p:hover{
-    border-bottom:1px solid red;
-}
 .copyRight{
     display: flex;
     justify-content: space-between;
@@ -105,15 +105,12 @@
 @media only screen and (max-width:1024px){
     .footerWrap{
         width: 100%;
-        padding: 0px 20px;
+        padding: 0px 30px;
     
     }
     .footerTopBarContent {
-        flex-direction: column;
-    }
-    .rightSideImgWRap img {
-        top:0px;
-        margin-top: 40px;
+        align-items: center;
+        padding: 13px 0px 31px 0;
     }
     .leftSideContent{
         width:100%;
@@ -121,6 +118,9 @@
      .rightSideImgWRap{
          width:100%;
      }
+     .rightSideImgWRap img {
+        left: 23px;
+    }
 }
 
 
@@ -131,9 +131,7 @@
     
     }
     .contactUs {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 18px;
-        padding-left: 36px;
+        flex-wrap: wrap;
     }
     .rightSideImgWRap img {
         margin-left: 106px;
@@ -143,8 +141,18 @@
         place-content: center;
         place-items: center;
     }
-    .leftSideContent{
-        order:1
+
+    .rightSideImgWRap img {
+        margin-left: 0px !important;
+        top: -96px;
+    }
+    .footerTopBarContent {
+        height: 459px;
+    }
+    .leftSideContent {
+        position: relative;
+        top:-80px;
+        order:1;
     }
    
 }
@@ -165,14 +173,18 @@
     .copyRight, .contactUs {
         display: block;
     }
-    .contactUs {
-        padding-left: 20px;
-    }
     .requestDemo {
         width: 100%;
+        margin-top: 10px;
+    
     }
-    .rightSideImgWRap img {
-        top: 0px;
-        margin-top: 0px;
+    .leftSideContent {
+        top: -44px;
     }
+    .footerTopBarContent {
+        height: 680px;
+        margin-top: 34px;   
+    
+    }
+   
 }

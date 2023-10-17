@@ -14,6 +14,7 @@ import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import { useRef } from "react";
 import { useEffect } from "react";
 import AboutDirectior from "./AboutDirectior";
+import PortfolioCountdown from "../Home/CountDown/CountDown";
 const About = () => {
   const ref = useRef(null);
   useEffect(() => {
@@ -231,6 +232,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <PortfolioCountdown/>
     </div>
   );
 };

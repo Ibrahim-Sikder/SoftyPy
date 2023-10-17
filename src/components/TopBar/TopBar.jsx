@@ -4,7 +4,7 @@ import {
   FaRegEnvelope,
   FaLinkedin,
   FaFacebook,
-  FaInstagramSquare,
+  FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
 import "./TopBar.css";
@@ -38,7 +38,7 @@ const TopBar = () => {
             </div>
            
             <div className="socialIcon">
-              <FaInstagramSquare />
+              <FaTwitter />
             </div>
             <div className="socialIcon">
               <FaYoutube />

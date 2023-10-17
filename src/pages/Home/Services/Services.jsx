@@ -8,6 +8,7 @@ import icon5 from "../../../../public/assets/icon10.png";
 import "./Services.css";
 
 const Services = () => {
+  
   const cardData = [
     {
       id: 1,
