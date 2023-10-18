@@ -19,7 +19,7 @@ import "aos/dist/aos.css";
 AOS.init();
 const TimeLine = () => {
   return (
-    <div>
+    <div className="timeLinesWraps">
       <SectionTitle
         title="How SoftyPy Work"
         text="As a full-stack digital marketing agency, Nextstair helps businesses across various industries get found online by their targeted customers. Take a look and see what’s how we work with every clients."

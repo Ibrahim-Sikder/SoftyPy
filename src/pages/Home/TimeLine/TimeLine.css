@@ -1,5 +1,8 @@
 
-
+.timeLinesWraps{
+  width:1300px;
+  margin:0 auto;
+}
   .timeline {
     position: relative;
     max-width: 1200px;
@@ -144,9 +147,20 @@
     object-fit: cover;
 }
 
+@media only screen and (max-width: 1024px) {
+  .timeLinesWraps{
+    width:100%;
+    padding: 0 30px;
+  }
+    .timeline {
+     width:100%;
+    }
+
+}
+
 
   @media only screen and (max-width: 768px) {
- 
+
  
     .timeline {
       margin: 50px auto;
@@ -179,5 +193,8 @@
   .container {
     padding-left: 23px;
     padding-right: 0px;
+}
+.textBox .textBoxImg {
+  width: 65%;
 }
 }

@@ -15,6 +15,7 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import AboutDirectior from "./AboutDirectior";
 import PortfolioCountdown from "../Home/CountDown/CountDown";
+import ManageMent from "./ManageMent/ManageMent";
 const About = () => {
   const ref = useRef(null);
   useEffect(() => {
@@ -232,6 +233,8 @@ const About = () => {
           </div>
         </div>
       </div>
+      <ManageMent/>
+
       <PortfolioCountdown/>
     </div>
   );

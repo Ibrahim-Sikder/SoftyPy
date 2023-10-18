@@ -6,8 +6,8 @@ import TopBar from "../components/TopBar/TopBar";
 const Main = () => {
     return (
         <div>
-            <TopBar/>
-            <NavBar/>
+            {/* <TopBar/>
+            <NavBar/> */}
             <Outlet/>
             <Footer/>
             

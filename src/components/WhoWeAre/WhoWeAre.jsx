@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 AOS.init();
 const WhoWeAre = () => {
     return (
-        <div className='whoWeareWrap'>
+        <div className='whoWeareWrap '>
            <div className="ourGoal">
             <div className='leftSide' data-aos="fade-right">
             <img src={img} alt="who we are " />

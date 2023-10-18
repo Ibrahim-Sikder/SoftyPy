@@ -85,7 +85,6 @@ export default Arrow = () => {
                     under the Clearent Software Holdings portfolio of companies.
                   </p>
                 </div>
-
                 <div className="sliderLeftSide">
                   <div className="circleWrap">
                     <div className="circle">

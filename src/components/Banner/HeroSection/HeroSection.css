@@ -1,0 +1,128 @@
+@keyframes animate_left {
+  0% {
+    opacity: 0;
+    margin-left: -500px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+@keyframes animate_right {
+  0% {
+    opacity: 0;
+    margin-left: 90px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+@keyframes heroBackground {
+    0% {
+        background: linear-gradient(0deg, #951fe8, #f87015);
+    }
+  
+    100% {
+        background: linear-gradient(50deg, #f87015, #951fe8);
+    }
+  }
+.header {
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  background: linear-gradient(to right, #951fe8, #f87015);
+  animation: heroBackground 0 10s linear infinite;
+}
+
+.header:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background: white;
+  left: 0;
+  bottom: 0;
+  clip-path: polygon(0px 10%, 0 100%, 100% 100%);
+  
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.navbar-list {
+  display: flex;
+  color: white;
+}
+.navbar-list li {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  position:relative;
+}
+.right-side{
+    position:relative;
+    top:50px
+}
+
+.header-content div {
+  width: 50%;
+}
+
+.left-side {
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+.left-side h1 {
+  font-size: 49px;
+  color: #fff;
+  margin-bottom: 0px;
+  animation: animate_left 2s 1 ease;
+}
+
+.left-side p {
+  animation-delay: 1s;
+  animation: animate_right 2s 1 ease;
+  color: #fff;
+}
+
+.ExploreBtn{
+  width: 200px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 15px;
+  font-size: 19px;
+  border: none;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  margin-top:10px;
+  animation-delay: 0.5s;
+  animation: animate_left 2s 1 ease;
+  transition:all .5s ease-in-out;
+  border: 1px solid #f87015;
+}
+
+.ExploreBtn:hover {
+    background: linear-gradient(to right, #951fe8, #f87015);
+    color:white;
+    border:1px solid white;
+}
+
+.right-side {
+  text-align: right;
+}
+.right-side img {
+  width: 500px;
+}
