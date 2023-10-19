@@ -6,24 +6,29 @@ import { FaArrowRight } from "react-icons/fa";
 import { useRef, useEffect } from "react";
 import TopServices from "./TopServices/TopServices";
 import BoostSection from "../../components/BostSection/BoostSection";
+import NavBar from "../Shared/NavBar/NavBar";
 const Services = () => {
   const ref = useRef(null);
   useEffect(() => {
     import("@lottiefiles/lottie-player");
   });
 
-  const services = useLoaderData();
-  console.log(services);
+ 
+
   return (
     <div>
-      <div className="servicesWrap">
-        <div className="servicesContent">
+       <div className="servicessWraps">
+        <div className="navsBarWrap">
+        <NavBar/>
+        
+        <div className="servicesContents">
           <div>
             <h2 className="text-2xl md:text-5xl font-bold">We Are SoftyPy </h2>
             <h3 className="text-xl md:text-2xl font-bold mt-5">
               Best Web Development Company In Bangladesh
             </h3>
           </div>
+        </div>
         </div>
       </div>
 

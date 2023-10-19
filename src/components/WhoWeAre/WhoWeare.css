@@ -11,12 +11,13 @@
 
 }
 .leftSide{
-    width:50%;
+    width:550px;
     
 }
 
 .leftSide img{
     width:100%;
+    object-fit: cover;
 }
 .rightside{
     width:50%;
@@ -41,3 +42,9 @@
         padding-left: 43px;
 }
 }
+@media only screen and (max-width:1024px){
+    .leftSide{
+       display: none;
+    }
+}
+

@@ -1,10 +1,19 @@
-import Review from '../../components/Review/Review'
+import Review from "../../components/Review/Review";
+import NavBar from "../Shared/NavBar/NavBar";
+import './Client.css'
 const Client = () => {
-    return (
-        <div className='my-24'>
-          <Review/>
+  return (
+    <section>
+      <div className=" clientSection">
+        <div className="navsBarWrap">
+          <NavBar />
         </div>
-    );
+      </div>
+      <div className="my-24">
+        <Review />
+      </div>
+    </section>
+  );
 };
 
 export default Client;

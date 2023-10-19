@@ -8,37 +8,57 @@ const NavBar = () => {
     const toggleMobileMenu = () => {
       setMobileMenu((mobileMenu) => !mobileMenu);
     };
-    useEffect(() => {
-      const handleScroll = () => {
-        setStickyMenu(window.scrollY > 50);
-      };
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector(".navbar");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+  
   return (
-    <div className="bg-white ">
-      <div className="flex items-center justify-between navbar mx-auto ">
-        <div className="w-52 ">
-          <Link to='/'><img src={softypy} alt="softypy" /></Link>
-        </div>
-        <div className="menubar">
-          <ul>
-          <Link to='/'> <li>Home</li></Link>
-           <Link to='/services'> <li>Services</li></Link>
-           <Link to='/portfolio'> <li>Portfolio</li></Link>
-           <Link to='/client'>   <li>Happy Clients </li></Link>
-           <Link to='/about'>   <li>About Us  </li></Link>
-           <Link to='/contact'>   <li>Contact Us  </li></Link>
-          </ul>
-        </div>
-        <div onClick={toggleMobileMenu} className='bar'>
+    <div className=" ">
+      <div className="navbar">
+            <div className="w-52 logo">
+              <Link to="/">
+                <h3 className="text-4xl font-bold">SoftyPy</h3>
+              </Link>
+            </div>
+            <ul className="navbar-list">
+              <Link to="/">
+                {" "}
+                <li className="navbar-item">Home</li>
+              </Link>
+              <Link to="/services">
+                {" "}
+                <li className="navbar-item">Services</li>
+              </Link>
+              <Link to="/portfolio">
+                {" "}
+                <li className="navbar-item">Portfolio</li>
+              </Link>
+              <Link to="/client">
+                {" "}
+                <li className="navbar-item">Happy Clients </li>
+              </Link>
+              <Link to="/about">
+                {" "}
+                <li className="navbar-item">About Us </li>
+              </Link>
+              <Link to="/contact">
+                {" "}
+                <li className="navbar-item">Contact Us </li>
+              </Link>
+            </ul>
+
+            <div onClick={toggleMobileMenu} className='bar'>
           <div>
             <span className={mobileMenu ? ` ` : `bar1`}></span>
             <span className={mobileMenu ? ` ` : `bar2`}></span>
             <span className={mobileMenu ? ` ` : `bar3`}></span>
           </div>
         </div>
-      </div>
+          </div>
+
+         
+
     </div>
   );
 };

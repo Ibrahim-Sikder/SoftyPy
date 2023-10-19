@@ -4,6 +4,7 @@ import "./Portfolio.css";
 import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { Link } from "react-router-dom";
+import NavBar from "../Shared/NavBar/NavBar";
 const Portfolio = () => {
   const [checked, setChecked] = useState([1]);
   const [tabIndex, setTabIndex] = useState(0);
@@ -20,7 +21,20 @@ const Portfolio = () => {
     setChecked(newChecked);
   };
   return (
-    <div className="portfolioWrap">
+    <div>
+      <div className=" portfolioHeroSection">
+        <div className="navsBarWrap">
+          <NavBar />
+
+          <div className="aboutContent">
+            <h3 className="text-4xl font-bold mb-2">Portfolio </h3>
+           <p>
+          Explore our portfolio to witness a showcase of our diverse IT projects, demonstrating our commitment to innovation and excellence.
+           </p>
+          </div>
+        </div>
+      </div>
+      <div className="portfolioWrap">
       <SectionTitle title="Working Portfolio"></SectionTitle>
       <div className="mt-16 mb-24">
         <Tabs
@@ -272,6 +286,7 @@ const Portfolio = () => {
           </TabPanel>
         </Tabs>
       </div>
+    </div>
     </div>
   );
 };

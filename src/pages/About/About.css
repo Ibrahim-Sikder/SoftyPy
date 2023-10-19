@@ -1,8 +1,22 @@
+
 .aboutWrap{
     width:1300px;
     margin:0 auto;
     overflow: hidden;
 }
+.aboutHero{
+  height: 70vh !important;
+}
+.aboutContent{
+  color: white;
+  position: relative;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-top: 37px;
+}
+
 .inner {
   max-width: calc(1200px + 40px);
   margin: 0 auto;
@@ -254,7 +268,11 @@ img {
    width:55%;
 }
 
-
+@media only screen and (max-width:1024px){
+  .aboutContent {
+    padding-right: 40px;
+}
+}
 
 @media (min-width: 768px) {
   .basic-title {
@@ -383,6 +401,14 @@ img {
 }
 .teamImg {
   margin-left: -1px;
+}
+.aboutContent {
+  padding-right: 0px;
+  width: 100%;
+  padding-left: 37px;
+}
+.aboutHero{
+  height: 75vh !important;
 }
 
 
