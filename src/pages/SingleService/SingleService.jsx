@@ -53,7 +53,7 @@ const SingleService = () => {
 
       <div className="singleServicesWrap">
         <div className="ecommerServices">
-          <div className="leftSide">
+          <div className="leftSideServices">
             <h3 className="text-4xl font-bold mb-3">
               Why Need E-commerce Website?
             </h3>
@@ -107,7 +107,7 @@ const SingleService = () => {
               </p>
             </div>
           </div>
-          <div className="rightSide">
+          <div className="rightSideServices">
             <lottie-player
               id="firstLottie"
               ref={ref}
@@ -122,9 +122,9 @@ const SingleService = () => {
           <SectionTitle title="Our More Products "></SectionTitle>
           <Products />
         </div>
-        <div className="my-10">
+        <div >
           <SectionTitle className='portfolioTitle' title="Some Of Our Work Portfolio " text=' "At SoftyPy, we deliver reliable IT solutions. Our portfolio highlights our expertise in problem-solving, system optimization, and exceptional customer service, ensuring your business is success."'></SectionTitle>
-          <div className="mt-16 mb-24">
+          <div className="mt-16 mb-5">
             <Tabs
               className="tabWrap"
               defaultTabIndex={tabIndex}
@@ -464,9 +464,9 @@ const SingleService = () => {
             </Tabs>
           </div>
         </div>
-        <div className="mt-16">
+        <div >
           <SectionTitle title="Why Choose SoftyPy For Your Software Solution?"></SectionTitle>
-          <div className="my-10">
+          <div className="whyChooseServices">
             <WhyChoosSe />
           </div>
         </div>

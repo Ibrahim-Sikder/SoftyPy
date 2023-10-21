@@ -1,3 +1,8 @@
+.chooseLeftSide{
+    width:50%;
+}
+
+
 .whyChooces{
     display: flex;
     justify-content: center;
@@ -7,4 +12,11 @@
     .whyChooces {
         flex-direction: column-reverse;
     }
+    .chooseLeftSide{
+        width:100%;
+    }
+    .portfolioTabs{
+        width:100% !important;
+    }
+    
 }

@@ -2,6 +2,7 @@
 .singleServicesWrap{
     width:1300px;
     margin:0 auto;
+    padding:0 35px;
 }
 .servicesWrap{
     background-image: url('../../../public/assets/web2.jpg');
@@ -43,9 +44,10 @@
     justify-content: space-between;
     align-items: ceter;
     flex-grow: auto ;
+    padding-top:30px;
   
 }
-.rightSide{
+.leftSideServices{
    width:650px;
 }
 .singleServicePortFolio{
@@ -78,4 +80,17 @@
     top: 130px;
 }
 
+.singleServicesWrap{
+    padding:0 10px;
 }
+.whyChooseServices{
+    margin-bottom:100px;
+}
+
+}
+@media only screen and (max-width:500px){
+
+    .leftSideServices{
+        width:100%;
+     }
+    }

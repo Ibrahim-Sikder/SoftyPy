@@ -12,11 +12,12 @@ export default function LabTabs() {
     setValue(newValue);
   };
 
+
   return (
     <Box sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList onChange={handleChange} aria-label="lab API tabs example">
+          <TabList  className="portfolioTabs" onChange={handleChange} aria-label="lab API tabs example">
             <Tab label="Web Performance Optimization" value="1" />
             <Tab label="Dedicated Suppor" value="2" />
             <Tab label="Reliability and Scalability" value="3" />
