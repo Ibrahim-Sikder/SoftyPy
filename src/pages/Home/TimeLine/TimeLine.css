@@ -2,7 +2,7 @@
 
   .timeline {
     position: relative;
-    max-width: 1300px;
+    width: 1300px;
     margin: 50px auto;
     padding:0 35px;
   }
@@ -152,7 +152,9 @@
     .timeline {
      width:100%;
     }
-
+.home{
+  width:100%;overflow: hidden;
+}
 }
 
 

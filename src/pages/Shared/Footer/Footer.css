@@ -186,5 +186,9 @@
         margin-top: 34px;   
     
     }
+    .footerWrap {
+        width: 100%;
+        padding: 0px 5px;
+    }
    
 }

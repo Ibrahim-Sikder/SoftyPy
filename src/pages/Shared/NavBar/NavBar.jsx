@@ -58,6 +58,8 @@ const NavBar = () => {
        
           </div>
           <div >
+       
+        </div>
         <ul className={mobileMenu ? `mobileMenu` : `mobileMenuActive`}>
               <Link to="/">
                 {" "}
@@ -84,8 +86,6 @@ const NavBar = () => {
                 <li className="navbar-item">Contact Us </li>
               </Link>
             </ul>
-        </div>
-         
 
     </div>
   );

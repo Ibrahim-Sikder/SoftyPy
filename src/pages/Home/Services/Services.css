@@ -153,8 +153,3 @@ object-fit: cover;
     }
  
  }
- @media only screen and (max-width: 375px){
-.titleWrap {
-    padding-left: 20px;
-}
- }

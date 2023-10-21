@@ -16,7 +16,7 @@ const Services = () => {
  
 
   return (
-    <div>
+    <div className="home" >
        <div className="servicessWraps">
         <div className="navsBarWrap">
         <NavBar/>
@@ -24,7 +24,7 @@ const Services = () => {
         <div className="servicesContents">
           <div>
             <h2 className="text-2xl md:text-5xl font-bold">We Are SoftyPy </h2>
-            <h3 className="text-xl md:text-2xl font-bold mt-5">
+            <h3 className="text-xl md:text-2xl font-bold mt-2">
               Best Web Development Company In Bangladesh
             </h3>
           </div>

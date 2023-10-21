@@ -12,15 +12,11 @@ import HeroSection from "../../components/Banner/HeroSection/HeroSection";
 
 const Home = () => {
   return (
-    <div>
-      {/* <Banner /> */}
+    <div className="home">
       <HeroSection/>
       <WhoWeAre />
       <SwiperTimeLine />
-    
-      <div>
         <TimeLine />
-      </div>
       <Choos2 />
       <Services />
       <Brand />
