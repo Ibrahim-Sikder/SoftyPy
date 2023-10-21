@@ -1,6 +1,8 @@
   .chooseWrap{
     width:1300px;
-    margin:0 auto;
+    margin:70px auto;
+    padding:0 35px;
+
   }
   .arrow {
     width: 30px;
@@ -62,7 +64,7 @@
   place-content: center;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding:20px 0;
 }
   .circleWrap{
     width: 600px;
@@ -117,7 +119,7 @@
   }
   .smallHead{
     text-align: center;
-    margin-top:50px;
+    margin-top: 18px;
     margin-bottom: 30px;
     position: relative;
   }
@@ -150,7 +152,8 @@
 }
 @media only screen and (max-width:1024px){
   .chooseWrap{
-    width:100%
+    width: 100%;
+    margin: 40px auto;
   }
   .sliderWrap{
     grid-template-columns: auto;

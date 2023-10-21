@@ -14,7 +14,7 @@ const NavBar = () => {
     });
   
   return (
-    <div className=" ">
+    <div>
       <div className="navbar">
             <div className="w-52 logo">
               <Link to="/">
@@ -55,8 +55,36 @@ const NavBar = () => {
             <span className={mobileMenu ? ` ` : `bar3`}></span>
           </div>
         </div>
+       
           </div>
-
+          <div >
+        <ul className={mobileMenu ? `mobileMenu` : `mobileMenuActive`}>
+              <Link to="/">
+                {" "}
+                <li className="navbar-item">Home</li>
+              </Link>
+              <Link to="/services">
+                {" "}
+                <li className="navbar-item">Services</li>
+              </Link>
+              <Link to="/portfolio">
+                {" "}
+                <li className="navbar-item">Portfolio</li>
+              </Link>
+              <Link to="/client">
+                {" "}
+                <li className="navbar-item">Happy Clients </li>
+              </Link>
+              <Link to="/about">
+                {" "}
+                <li className="navbar-item">About Us </li>
+              </Link>
+              <Link to="/contact">
+                {" "}
+                <li className="navbar-item">Contact Us </li>
+              </Link>
+            </ul>
+        </div>
          
 
     </div>

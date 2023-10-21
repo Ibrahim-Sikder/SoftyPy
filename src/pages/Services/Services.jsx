@@ -232,7 +232,7 @@ const Services = () => {
           </div>
 
           <div className="products mt-56">
-            <div className="productLeftSide">
+            <div className="productLeftSide ">
               <h2>Products </h2>
               <p className="text-xl">
                 We make better products and make products better. From design
@@ -246,7 +246,7 @@ const Services = () => {
               </p>
             </div>
 
-            <div className="productRightSide">
+            <div className="productRightSide ">
               <lottie-player
                 id="firstLottie"
                 ref={ref}
@@ -254,7 +254,6 @@ const Services = () => {
                 loop
                 mode="normal"
                 src="/animation.json"
-                className="animation"
               ></lottie-player>
             </div>
           </div>

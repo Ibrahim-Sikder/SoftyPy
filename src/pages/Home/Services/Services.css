@@ -1,13 +1,14 @@
 .servicesWraps{
     width:1300px;
     margin:0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
+    padding:0 35px;
 }
 .ourServicesWrap{
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    margin: 70px 0;
+    margin: 40px 0;
 }
 .cardsWrap {
     display: grid;
@@ -121,6 +122,7 @@ object-fit: cover;
         width: 100%;
         margin-bottom: 28px;
     }
+
  }
  @media only screen and (max-width:768px){
     .ourServicesWrap {
@@ -145,6 +147,9 @@ object-fit: cover;
     .cards {
         width: 150px;
         height: 142px;
+    }
+    .servicesWraps{
+        padding:0 10px;
     }
  
  }

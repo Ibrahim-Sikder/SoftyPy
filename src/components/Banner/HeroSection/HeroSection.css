@@ -63,13 +63,6 @@ background: radial-gradient(farthest-side at 80% 80%, #FF333D, #F87015, #541283f
   
 }
 
-.navbar {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
-  align-items: center;
-}
 
 
 .header-content {
@@ -148,9 +141,7 @@ background: radial-gradient(farthest-side at 80% 80%, #FF333D, #F87015, #541283f
   .left-side h1 {
     font-size: 45px;
 }
-.navbar-list{
-  display: none;
-}
+
 .right-side {
   width:400px !important;
  }

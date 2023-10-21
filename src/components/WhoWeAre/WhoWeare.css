@@ -1,7 +1,8 @@
 .whoWeareWrap{
     width:1300px;
     margin: 0 auto;
-    margin-top:100px;
+    margin-top:50px;
+    padding: 0 35px;
 
 }
 .ourGoal{
@@ -20,7 +21,7 @@
     object-fit: cover;
 }
 .rightside{
-    width:50%;
+    width:65%;
     text-align:left;
 }
 .rightside p{
@@ -38,13 +39,15 @@
     .rightside, .leftSide{
         width:100%;
     }
-    .rightside{
-        padding-left: 43px;
-}
-}
-@media only screen and (max-width:1024px){
     .leftSide{
-       display: none;
+        display: none;
+     }
+}
+@media only screen and (max-width:500px){
+   
+    .whoWeareWrap{
+        margin-top:70px;
+        padding: 0 20px;
     }
 }
 

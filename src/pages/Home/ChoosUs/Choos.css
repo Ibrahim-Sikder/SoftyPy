@@ -1,15 +1,34 @@
 .choosWrap{
     width:1300px;
     margin:0 auto;
+    padding:0 35px;
+    overflow: hidden;
+}
+.boxWrap{
+    display: flex;
+    width:1265px !important;
+    margin:0 auto;
+    justify-content: center;
+   
 }
 .technologies{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width:1015px !important;
 }
-.boxWrap{
-    display: flex;
+.tabs{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 250px !important;
+    margin-top:130px !important;
 }
+.technologyWrap{
+    width: 1015px;
+    }
+  
+
 .container{
     position: relative;
     display: flex;
@@ -74,14 +93,15 @@
     color:#F87015 !important;
     font-size: 22px !important;
 }
+.technologyTitle{
+    color: #F97C28;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 2px solid #F97C28;
+    width: 200px;
+}
 .technologyRightSide{
     width:500px;
-}
-.tabs{
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 30% !important;
 }
 
 .choocesWrap{
@@ -89,9 +109,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.chooseLeftSide{
-    flex-basis: 600px;
-}
+
 
 .singleProduct{
     width:400px;
@@ -102,9 +120,6 @@
 
 
 /* marque styling  */
-.technologyWrap{
-  width: 1000px;
-  }
 
   .skillAnimation{
     width:170px;
@@ -157,19 +172,28 @@
         width:100%;
     }
 /* marquee */
-.technologyWrap{
-    width: 850px;
-    }
+
       .tabs{
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
         width: 30% !important;
     }
+    .boxWrap, .technologyWrap, .technologies, .tabs{
+      width:100% !important;
+       
+    }
+    .boxWrap {
+        display: block;
+    }
+      
     
 }
 
 @media only screen and (max-width:768px){
+    .choosWrap{
+        padding:0 10px;
+    }
     .technologies {
         display: flex;
         justify-content: space-between;
@@ -186,9 +210,7 @@
         .technologyRightSide {
             margin-bottom: 40px;
         }
-        .boxWrap {
-            display: block;
-        }
+    
     
         /* marquee */
     

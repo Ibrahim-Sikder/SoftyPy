@@ -17,6 +17,7 @@
   margin-top: 37px;
 }
 
+
 .inner {
   max-width: calc(1200px + 40px);
   margin: 0 auto;
@@ -409,6 +410,12 @@ img {
 }
 .aboutHero{
   height: 75vh !important;
+}
+.aboutContainer .imgWrap {
+  width: 300px !important;
+  height: 300px !important;
+  border-radius: 100% !important;
+  overflow: hidden;
 }
 
 

@@ -56,8 +56,8 @@ export default function Review() {
   );
 
   return (
-    <div className="mb-16">
-     <div className="mb-24">
+    <div>
+     <div className="mb-8">
      <SectionTitle title='What Our Client Say '></SectionTitle>
      </div>
       <div className="reviewSliderWrap">
@@ -74,16 +74,15 @@ export default function Review() {
               <h6>
                 Buildtech Architect & Engineers
               </h6>
-              <blockquote className="flex mt-10">
+              <blockquote className="flex mt-3">
                 <FaQuoteLeft className="leftQoute" />
-                <p >
+                <p className="text-xl">
                   SOFTYPY is providing a valuable service to businesses in
-                  today is fast-paced and technology-driven world. The team is
+                  today's fast-paced and technology-driven world. The team's
                   expertise in digital marketing is helping companies reach
                   their target audience, increase brand awareness, drive traffic
                   to their website, and generate leads and sales.
                 </p>
-               
               </blockquote>
              <div className="flex flex-end items-center text-[#F87015] ml-8">
              <button>Read history </button>
@@ -99,15 +98,14 @@ export default function Review() {
             </div>
             <div className="reviewContent">
               <h3 className="text-4xl font-bold text-[#F87015] ">
-                Kamal Hossain{" "}
+                Kamal Hossain
               </h3>
               <h6 className="text-xl font-bold mt-2">
                 Buildtech Architect & Engineers
               </h6>
-              <blockquote className="flex mt-10">
+              <blockquote className="flex mt-3">
                 <FaQuoteLeft className="leftQoute" />
-                <p className="text-2xl">
-                  {" "}
+                <p className="text-xl">
                   SOFTYPY is providing a valuable service to businesses in
                   today's fast-paced and technology-driven world. The team's
                   expertise in digital marketing is helping companies reach
@@ -134,10 +132,9 @@ export default function Review() {
               <h6 className="text-xl font-bold mt-2">
                 Buildtech Architect & Engineers
               </h6>
-              <blockquote className="flex mt-10">
+              <blockquote className="flex mt-3">
                 <FaQuoteLeft className="leftQoute" />
-                <p className="text-2xl">
-                  {" "}
+                <p className="text-xl">
                   SOFTYPY is providing a valuable service to businesses in
                   today's fast-paced and technology-driven world. The team's
                   expertise in digital marketing is helping companies reach

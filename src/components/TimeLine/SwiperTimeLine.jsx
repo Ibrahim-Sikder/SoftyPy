@@ -36,7 +36,7 @@ export default Arrow = () => {
   });
 
   return (
-    <section className="my-24 ">
+    <section className=" ">
       <main className="chooseWrap">
         <SectionTitle title="Why Choose SoftyPy? Your Ideal IT Partner for Success "></SectionTitle>
 

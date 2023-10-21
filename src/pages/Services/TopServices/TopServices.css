@@ -3,6 +3,7 @@
 .topServicesWrap{
     width:1300px;
     margin:0 auto;
+    padding:0 35px;
 }
 .topServices{
     display: flex;
@@ -84,6 +85,9 @@
 }
 @media only screen and (max-width:768px){
     .relatedServiceHead h2 {
+        width: 100%;
+    }
+    .topServicesLeft {
         width: 100%;
     }
     .topServices {

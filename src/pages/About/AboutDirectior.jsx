@@ -9,7 +9,7 @@ import "./Director.css";
 const AboutDirectior = () => {
   return (
     <div>
-      <div className="timeline">
+      <div className="aboutTimeLine">
         <div data-aos="fade-right" className="aboutLeftContainer aboutContainer">
           <span>
             <FaStreetView />

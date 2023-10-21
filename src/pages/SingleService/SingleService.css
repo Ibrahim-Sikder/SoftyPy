@@ -68,6 +68,14 @@
     }
     .singleServicesWrap{
         width:100%;
+        margin-top: 35px;
     }
      
+}
+@media only screen and (max-width:768px){
+
+.servicesContents {
+    top: 130px;
+}
+
 }

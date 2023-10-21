@@ -1,3 +1,4 @@
+import Brand from "../../components/Brand/Brand";
 import Review from "../../components/Review/Review";
 import NavBar from "../Shared/NavBar/NavBar";
 import './Client.css'
@@ -12,6 +13,7 @@ const Client = () => {
       <div className="my-24">
         <Review />
       </div>
+      <Brand/>
     </section>
   );
 };

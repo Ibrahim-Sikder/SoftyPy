@@ -45,7 +45,7 @@ const Services = () => {
   ];
   return (
     <div className="servicesWraps">
-      <div className="mb-8">
+      <div className="">
         <SectionTitle
           title="Our Services"
           text=" Unlocking digital potential, we provide bespoke IT services that blend innovation with reliability, ensuring your business stands out in a rapidly evolving tech landscape"

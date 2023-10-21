@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import WhyChoosSe from "../Home/ChoosUs/WhyChoosSe";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import Products from "../../components/MoreProducts/Products";
+import NavBar from "../Shared/NavBar/NavBar";
 AOS.init();
 
 const SingleService = () => {
@@ -31,10 +32,15 @@ const SingleService = () => {
 
   return (
     <div>
-      <div className="servicesWrap">
-        <div className="servicesContent">
+   
+     
+      <div className="servicessWraps">
+        <div className="navsBarWrap">
+        <NavBar/>
+        
+        <div className="servicesContents">
           <div>
-            <h2 className="text-2xl md:text-5xl font-bold">
+          <h2 className="text-2xl md:text-5xl font-bold">
               One-Stop Shop for All Your Online Needs{" "}
             </h2>
             <h3 className="text-xl md:text-2xl font-bold mt-5">
@@ -42,7 +48,9 @@ const SingleService = () => {
             </h3>
           </div>
         </div>
+        </div>
       </div>
+
       <div className="singleServicesWrap">
         <div className="ecommerServices">
           <div className="leftSide">

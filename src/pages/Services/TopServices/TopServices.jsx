@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "./TopServices.css";
@@ -32,7 +32,7 @@ export default Arrow = () => {
     <>
       <main className="topServicesWrap">
         <div>
-          <div data-aos="fade-up" className="relatedServiceHead mb-10 mt-8">
+          <div data-aos="fade-up" className="relatedServiceHead  mt-8">
             <h2 className="text-3xl md:text-5xl">Our Top Services</h2>
           </div>
         </div>

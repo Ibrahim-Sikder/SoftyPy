@@ -18,7 +18,7 @@ const Home = () => {
       <WhoWeAre />
       <SwiperTimeLine />
     
-      <div className="my-24">
+      <div>
         <TimeLine />
       </div>
       <Choos2 />
