@@ -103,4 +103,10 @@ top:-50px;
     .portFolioExample {
         padding-left: 3px;
     }
+    .countdown {
+        width: 140px;
+    }
+    .singleCountDown {
+        font-size: 35px;
+    }
 }

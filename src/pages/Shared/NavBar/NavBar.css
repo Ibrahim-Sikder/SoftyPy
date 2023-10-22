@@ -113,7 +113,7 @@
     transition: all 0.5s linear(-0.47 -53.68%, 1 100%);
     position: absolute;
     top: 20px;
-    right: 10px;
+    right: 30px;
   }
   .bar div {
     position: relative;
@@ -149,4 +149,14 @@
     right: -18px;
     transition: all 0.5s linear(-0.47 -53.68%, 1 100%);
   }
+}
+
+@media  only screen and (max-width:400px) {
+  .navbar {
+    padding: 15px 15px;
+}
+.bar {
+  right: 15px;
+}
+  
 }

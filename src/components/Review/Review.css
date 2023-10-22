@@ -90,12 +90,22 @@
     .thumbnail {
         margin-top: -52px !important;
     }
+    .reviewContent {
+        margin-left: 0px;
+    }
+    .reviewImg {
+        width: 235px;
+        height: 235px;
+    }
 }
 
-@media only screen and (max-width: 3750px){
+@media only screen and (max-width: 375px){
+
 .thumbnail {
-    margin-top: 10px !important;
+    margin-top: -17px !important;
     float: none;
-    margin-left: 34px !important;
+    margin-left: 19px !important;
 }
+
+
 }

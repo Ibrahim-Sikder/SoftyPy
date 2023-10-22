@@ -40,14 +40,14 @@
     }
     .boostSectionLeft{
         width: 100%;
-        padding-left: 50px;
+        padding-left: 20px;
     }
     .boostRightSide {
         display: none;
     }
 }
 @media only screen and (max-width:500px){
-    .boostSectionLeft{
-        padding-left: 20px;
+    .boostSectionLeft {
+        padding-left: 6px;
     }
 }

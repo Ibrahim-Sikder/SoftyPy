@@ -18,7 +18,7 @@ const NavBar = () => {
       <div className="navbar">
             <div className="w-52 logo">
               <Link to="/">
-                <h3 className="text-4xl font-bold">SoftyPy</h3>
+                <h3 className="text-3xl md:text-4xl font-bold">SoftyPy</h3>
               </Link>
             </div>
             <ul className="navbar-list">

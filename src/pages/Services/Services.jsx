@@ -80,17 +80,17 @@ const Services = () => {
             <div className="card">
               <div className="inner-box">
                 <div className="card-front card-front5">
-                  <h3 className="text-white text-4xl font-bold">
+                  <h3 className="text-white text-2xl md:text-4xl font-bold">
                     Travel Agency Website
                   </h3>
                 </div>
                 <div className="card-back text-white">
                   <div className="card-back-content px-3">
-                    <h4 className="text-2xl font-bold ">
+                    <h4 className="text-xl md:text-2xl font-bold ">
                       {" "}
                       Travel Agency Website{" "}
                     </h4>
-                    <p className="my-3">
+                    <p className="my-1 md:my-3 leading-4">
                       Decorate an attractive website that represents all the
                       traveling scopes both at home and abroad. Make sure
                       travelers can find it easy and helpful.
@@ -106,14 +106,14 @@ const Services = () => {
             <div className="card">
               <div className="inner-box">
                 <div className="card-front card-front1">
-                  <h3 className="text-white text-4xl font-bold">
+                  <h3  className="text-white text-2xl md:text-4xl font-bold">
                     Eccomerce Website{" "}
                   </h3>
                 </div>
                 <div className="card-back text-white">
                   <div className="card-back-content px-3">
-                    <h4 className="text-2xl font-bold ">Ecommerce Website </h4>
-                    <p className="my-3">
+                    <h4 className="text-xl md:text-2xl font-bold ">Ecommerce Website </h4>
+                    <p className="my-1 md:my-3 leading-4">
                       A website that can properly manage all kinds of products
                       you want to sell. Help your customers to purchase easily
                       through eCommerce sites.
@@ -129,14 +129,14 @@ const Services = () => {
             <div className="card">
               <div className="inner-box">
                 <div className="card-front card-front2">
-                  <h3 className="text-white text-4xl font-bold">
+                  <h3 className="text-white text-2xl md:text-4xl font-bold">
                     Education Website{" "}
                   </h3>
                 </div>
                 <div className="card-back text-white">
                   <div className="card-back-content px-3">
-                    <h4 className="text-2xl font-bold ">Education Website </h4>
-                    <p className="my-3">
+                    <h4 className="text-xl md:text-2xl font-bold ">Education Website </h4>
+                    <p className="my-1 md:my-3 leading-4">
                       Spread the proper education using an informative and
                       learner-friendly educational website. Take the learning
                       system to one step higher.
@@ -152,14 +152,14 @@ const Services = () => {
             <div className="card">
               <div className="inner-box">
                 <div className="card-front card-front3">
-                  <h3 className="text-white text-4xl font-bold">
+                  <h3 className="text-white text-2xl md:text-4xl font-bold">
                     Blog Website{" "}
                   </h3>
                 </div>
                 <div className="card-back text-white">
                   <div className="card-back-content px-3">
-                    <h4 className="text-2xl font-bold ">Blog Website </h4>
-                    <p className="my-3">
+                    <h4 className="text-xl md:text-2xl font-bold ">Blog Website </h4>
+                    <p className="my-1 md:my-3 leading-4">
                       Publish all your writings and personal experience through
                       a nice-looking blog/portfolio website. Give your readers
                       an amazing reading environment.
@@ -175,14 +175,14 @@ const Services = () => {
             <div className="card">
               <div className="inner-box">
                 <div className="card-front card-front4">
-                  <h3 className="text-white text-4xl font-bold">
+                  <h3 className="text-white text-2xl md:text-4xl font-bold">
                     Corporate Website{" "}
                   </h3>
                 </div>
                 <div className="card-back text-white">
                   <div className="card-back-content px-3">
-                    <h4 className="text-2xl font-bold ">Corporate Website </h4>
-                    <p className="my-3">
+                    <h4 className="text-xl md:text-2xl font-bold ">Corporate Website </h4>
+                    <p className="my-1 md:my-3 leading-4">
                       “Every problem is a gift—without problems we would not
                       grow.”
                     </p>
@@ -197,14 +197,14 @@ const Services = () => {
             <div className="card">
               <div className="inner-box">
                 <div className="card-front card-front6">
-                  <h3 className="text-white text-4xl font-bold">
+                  <h3 className="text-white text-2xl md:text-4xl font-bold">
                     News Website{" "}
                   </h3>
                 </div>
                 <div className="card-back text-white">
                   <div className="card-back-content px-3">
-                    <h4 className="text-2xl font-bold ">News Website </h4>
-                    <p className="my-3">
+                    <h4 className="text-xl md:text-2xl font-bold ">News Website </h4>
+                    <p className="my-1 md:my-3 leading-4">
                       “Were it left to me to decide if we should have a
                       government without newspapers, or newspapers without a
                       government, I should not hesitate a moment to prefer the

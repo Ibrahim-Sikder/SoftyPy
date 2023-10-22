@@ -86,7 +86,7 @@ export default function VerticalTabs() {
 
   return (
     <div className="choosWrap py-3">
-     <div className="mb-14">
+     <div className="">
       <h3 className="technologyTitle">Technologies</h3>
      </div>
       <Box className='boxWrap' sx={{ bgcolor: "background.paper", }}>
@@ -106,7 +106,7 @@ export default function VerticalTabs() {
         </Tabs>
         <TabPanel value={value} index={0}>
         <div className='technologyWrap'>
-            <h3 className="text-3xl font-bold text-center">Using Programming Languase </h3>
+            <h3 className="text-xl md:text-3xl font-bold ">Using Programming Languase </h3>
          <div className="flex items-center">
          <Marquee pauseOnHover={true}>
          <div className='skill skills'>
@@ -169,7 +169,7 @@ export default function VerticalTabs() {
         </TabPanel>
         <TabPanel value={value} index={1}>
         <div className='technologyWrap'>
-            <h3 className="text-3xl font-bold text-center"> Using Database </h3>
+            <h3 className="text-xl md:text-3xl font-bold "> Using Database </h3>
          <div className="flex items-center">
          <Marquee pauseOnHover={true}>
             <div className='skill skills'>
@@ -206,7 +206,7 @@ export default function VerticalTabs() {
         <TabPanel value={value} index={2}>
         <div className="technologies">
             <div>
-              <h3 className="text-3xl font-bold mb-3">Reporting</h3>
+              <h3 className="text-xl md:text-3xl font-bold ">Reporting</h3>
               <ul className="category">
                 <li className="flex items-center">
                   <small className="mr-3">
@@ -304,7 +304,7 @@ export default function VerticalTabs() {
         <TabPanel value={value} index={4}>
         <div className="technologies">
             <div>
-              <h3 className="text-3xl font-bold mb-5">Testing</h3>
+              <h3 className="text-xl md:text-3xl font-bold ">Testing</h3>
               <ul className="category">
                 <li className="flex items-center">
                   <small className="mr-3">

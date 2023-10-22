@@ -27,13 +27,15 @@ const About = () => {
 
   return (
     <section>
-      <div className="header aboutHero">
+       <div className=" portfolioHeroSection">
         <div className="navsBarWrap">
           <NavBar />
 
-          <div className="aboutContent">
-            <h3 className="text-4xl font-bold mb-2">About Us </h3>
-            <p>We are a global IT solutions provider, dedicated to delivering cutting-edge technology solutions and exceptional services worldwide.</p>
+          <div className=" portfolioContent">
+            <h3 className="text-3xl md:text-5xl font-bold mb-2">About Us </h3>
+            <p className="md:text-xl">
+            We are a global IT solutions provider, dedicated to delivering cutting-edge technology solutions and exceptional services worldwide.
+            </p>
           </div>
         </div>
       </div>

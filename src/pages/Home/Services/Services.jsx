@@ -78,9 +78,9 @@ const Services = () => {
                       <p className="mt-2 font-bold">{card.name}</p>
                     </div>
                     <div className="cards-back text-white">
-                      <div className="cards-back-content px-3">
+                      <div className="cards-back-content md:px-3">
                         <b className="block"> {card.name}</b>
-                        <small className="my-3">
+                        <small className="my-1 md:my-3">
                          {card.desc}
                         </small>
                       </div>

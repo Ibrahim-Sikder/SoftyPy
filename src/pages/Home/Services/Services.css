@@ -151,5 +151,19 @@ object-fit: cover;
     .servicesWraps{
         padding:0 10px;
     }
+    .cards-back-content :where(small, b){
+        line-height: 13px !important;
+        display: block;
+    }
+    .cards-back-content b{
+        font-size:13px;
+    }
  
  }
+@media only screen and (max-width:400px){
+    .cards {
+        width: 135px;
+        height: 139px;
+    }
+    
+}

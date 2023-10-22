@@ -49,7 +49,7 @@ export default Arrow = () => {
               </div>
               <div className="sliderWrap">
                 <div className="sliderLeftSide">
-                  <p className="text-xl ">
+                  <p className="md:text-xl ">
                     Advent International acquires and merges FieldEdge with
                     Clearent. FieldEdge operates as an independent subsidiary
                     under the Clearent Software Holdings portfolio of companies.
@@ -79,7 +79,7 @@ export default Arrow = () => {
               </div>
               <div className="sliderWrap">
                 <div>
-                  <p className="text-xl ">
+                  <p className="md:text-xl ">
                     Advent International acquires and merges FieldEdge with
                     Clearent. FieldEdge operates as an independent subsidiary
                     under the Clearent Software Holdings portfolio of companies.
@@ -107,7 +107,7 @@ export default Arrow = () => {
               </div>
               <div className="sliderWrap">
                 <div>
-                  <p className="text-xl ">
+                  <p className="md:text-xl ">
                     Advent International acquires and merges FieldEdge with
                     Clearent. FieldEdge operates as an independent subsidiary
                     under the Clearent Software Holdings portfolio of companies.

@@ -199,4 +199,14 @@
 .textBox {
   width: 100%;
 }
+.leftContainer span, .rightContainer span {
+  left: -8px;
+  top: 89px;
+}
+.textBox {
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+}
 }

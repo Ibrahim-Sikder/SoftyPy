@@ -48,7 +48,8 @@ const Brand = () => {
     return (
         <div className='brandWrap'>
           <SectionTitle title='Our Happy Clients '></SectionTitle>
-              <Slider {...settings}>
+             <div className="slidersWraps">
+             <Slider {...settings}>
                 <div className='slider'>
                     <img src={brand} alt="brand" />
                 </div>
@@ -77,6 +78,7 @@ const Brand = () => {
                     <img src={brand3} alt="brand" />
                 </div>
               </Slider>
+             </div>
         </div>
     );
 };
