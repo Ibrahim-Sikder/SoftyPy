@@ -223,4 +223,7 @@
   .contactHeroSection::after{
     clip-path: polygon(100% 100%, 0 100%, 100% 100%);
   }
+  .getInTouchRight {
+     margin-left: 0px;
+}
 }

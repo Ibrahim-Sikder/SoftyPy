@@ -11,6 +11,7 @@
 @media screen and (max-width:768px) {
     .whyChooces {
         flex-direction: column-reverse;
+        margin-bottom: 50px;
     }
     .chooseLeftSide{
         width:100%;

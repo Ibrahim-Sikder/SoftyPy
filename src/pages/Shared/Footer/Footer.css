@@ -205,6 +205,9 @@
     .rightSideImgWRap {
         width: 92%;
     }
+    .footerWrap {
+        margin-top: -25px;
+    }
     
 }
 

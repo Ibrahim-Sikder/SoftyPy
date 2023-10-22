@@ -1,5 +1,5 @@
 import './WhoWeare.css'
-import img from '../../../public/assets/developers.png'
+import img from '../../../public/assets/feature.png'
 import CommonButton from '../../pages/Shared/CommonButton/CommonButton';
 import AOS from 'aos';
 import 'aos/dist/aos.css';

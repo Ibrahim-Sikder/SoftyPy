@@ -1,5 +1,6 @@
-import  { Component } from "react";
+import { Component } from "react";
 import "./CountDown.css";
+import technicalBgImg from "../../../../public/assets/technical.webp";
 class PortfolioCountdown extends Component {
   constructor(props) {
     super(props);
@@ -13,10 +14,10 @@ class PortfolioCountdown extends Component {
 
   startCounting = (countType) => {
     const totalCounts = {
-      projectCount: 70,
+      projectCount: 170,
       developerCount: 20,
       experienceYears: 5,
-      clientCount: 50,
+      clientCount: 90,
     };
 
     this.countdownInterval = setInterval(() => {
@@ -47,7 +48,7 @@ class PortfolioCountdown extends Component {
   }
 
   handleScroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 200) {
       this.startCounting("projectCount");
       this.startCounting("developerCount");
       this.startCounting("experienceYears");
@@ -65,38 +66,56 @@ class PortfolioCountdown extends Component {
 
   render() {
     return (
-      <div className="portFolioExample">
-        <div className="countDownWrap">
-          <div className="countdown" onClick={() => this.resetCounts("projectCount")}>
-            <div className="singleCountDown">
-              <p>{this.state.projectCount}</p>
-              <span>+</span>
+      <section>
+        <div className="featured-item bg-fixed text-white  my-20">
+          <div className="md:flex justify-center items-center px-36">
+            <div className="portFolioExample">
+              <div className="countDownWrap">
+                <div
+                  className="countdown"
+                  onClick={() => this.resetCounts("projectCount")}
+                >
+                  <div className="singleCountDown">
+                    <p>{this.state.projectCount}</p>
+                    <span>+</span>
+                  </div>
+                  <h2>Projects</h2>
+                </div>
+                <div
+                  className="countdown"
+                  onClick={() => this.resetCounts("developerCount")}
+                >
+                  <div className="singleCountDown">
+                    <p>{this.state.developerCount}</p>
+                    <span>+</span>
+                  </div>
+                  <h2>Professional Developers</h2>
+                </div>
+                <div
+                  className="countdown"
+                  onClick={() => this.resetCounts("experienceYears")}
+                >
+                  <div className="singleCountDown">
+                    <p>{this.state.experienceYears}</p>
+                    <span>+</span>
+                  </div>
+                  <h2>Years of Experience</h2>
+                </div>
+                <div
+                  className="countdown"
+                  onClick={() => this.resetCounts("clientCount")}
+                >
+                  <div className="singleCountDown">
+                    <p>{this.state.clientCount}</p>
+                    <span>+</span>
+                  </div>
+                  <h2>Esteemed Clients</h2>
+                </div>
+              </div>
             </div>
-            <h2>Projects</h2>
-          </div>
-          <div className="countdown" onClick={() => this.resetCounts("developerCount")}>
-            <div className="singleCountDown">
-              <p>{this.state.developerCount}</p>
-              <span>+</span>
-            </div>
-            <h2>Professional Developers</h2>
-          </div>
-          <div className="countdown" onClick={() => this.resetCounts("experienceYears")}>
-            <div className="singleCountDown">
-              <p>{this.state.experienceYears}</p>
-              <span>+</span>
-            </div>
-            <h2>Years of Experience</h2>
-          </div>
-          <div className="countdown" onClick={() => this.resetCounts("clientCount")}>
-            <div className="singleCountDown">
-              <p>{this.state.clientCount}</p>
-              <span>+</span>
-            </div>
-            <h2>Esteemed Clients</h2>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

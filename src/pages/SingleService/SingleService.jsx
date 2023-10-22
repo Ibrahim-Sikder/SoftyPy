@@ -140,7 +140,7 @@ const SingleService = () => {
                 <Tab>Education </Tab>
               </TabList>
               <TabPanel>
-                <div className="portfolio grid grid-cols-1 md:grid-cols-3 place-items-center">
+                <div className="portfolio grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
                   <Link>
                     <div className="singlePortfolio singleServicePortFolio portfolio1">
                       <div className="bg-[#951FE8] text-white absolute w-full right-0 bottom-0  ">

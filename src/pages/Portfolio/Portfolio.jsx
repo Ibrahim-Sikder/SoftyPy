@@ -38,7 +38,7 @@ const Portfolio = () => {
       </div>
       <div className="portfolioWrap">
         <SectionTitle title="Working Portfolio"></SectionTitle>
-        <div className="mt-16 mb-24">
+        <div className="mt-8mb-24">
           <Tabs
             className="tabWrap"
             defaultTabIndex={tabIndex}
