@@ -38,7 +38,9 @@ export default Arrow = () => {
   return (
     <section className=" ">
       <main className="chooseWrap">
-        <SectionTitle title="Why Choose SoftyPy? Your Ideal IT Partner for Success "></SectionTitle>
+       <div >
+       <SectionTitle data-aos="zoom-in" title="Why Choose SoftyPy? Your Ideal IT Partner for Success "></SectionTitle>
+       </div>
 
         <div data-aos="fade-up-left" className="navigation-wrapper">
           <div ref={sliderRef} className="keen-slider">

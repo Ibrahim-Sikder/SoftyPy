@@ -52,7 +52,7 @@ const Services = () => {
         ></SectionTitle>
       </div>
       <div className="ourServicesWrap">
-        <div className="ourServiceLeftSide">
+        <div  className="ourServiceLeftSide">
           <h3 className="text-3xl mb-3 text-[#F87015] font-bold ">
             Your Vision, Our Mission.
           </h3>
