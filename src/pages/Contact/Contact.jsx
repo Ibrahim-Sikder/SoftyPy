@@ -10,7 +10,43 @@ import "./Contact.css";
 import { useRef } from "react";
 import { useEffect } from "react";
 import NavBar from "../Shared/NavBar/NavBar";
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 const Contact = () => {
+  const { register, formState: { errors }, handleSubmit } = useForm();
+  const navigate = useNavigate()
+const onSubmit = (data) => {
+  const user = {
+    name: data.name,
+    email: data.email,
+    phone: data.phone,
+    message: data.message
+  }
+
+  fetch('http://localhost:5000/users', {
+    method: "POST",
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify(user)
+  })
+  .then(res=>res.json())
+  .then(data=>{
+   if(data.insertedId){
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Thank you for submission ! We will contact you soon.',
+      showConfirmButton: false,
+      timer: 1500
+    })
+    navigate('/')
+   }
+  })
+};
+
+
   const ref = useRef(null);
   useEffect(() => {
     import("@lottiefiles/lottie-player");
@@ -56,38 +92,48 @@ const Contact = () => {
                 message below and we will respond as soon as possible.
               </p>
             </div>
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="formControl">
                 <label> Name <span className="text-red-500 text-xl">*</span></label>
                 <input
+                {...register("name", { required: true })}
+                name='name'
                   className="inputField"
                   type="text"
                   placeholder="Enter Your Full Name "
-                  required
+                  
                 />
               </div>
+              {errors.name && <p className="text-red-500 ">Name is required!</p>}
               <div className="formControl">
+             
                 <label> Email </label>
                 <input
+                  {...register("email", { required: true })}
+                  name='email'
                   className="inputField"
-                  type="text"
+                  type="email"
                   placeholder="Enter Your Email "
                 />
               </div>
               <div className="formControl">
                 <label> Phone Number <span className="text-red-500 text-xl">*</span></label>
                 <input
+                  {...register("phone", { required: true })}
+                  name='phone'
                   className="inputField"
-                  type="text"
+                  type="number"
                   placeholder="Enter Your Phone Number "
                   required
                 />
+                  {errors.phone && <p className="text-red-500 ">Phone number is required!</p>}
               </div>
               <div className="formControl">
                 <label> Message </label>
                 <textarea
+                  {...register("message", { required: true })}
+                  name='message'
                   placeholder=" Enter Your Message"
-                  name=""
                   id=""
                   cols="30"
                   rows="10"

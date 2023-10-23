@@ -4,7 +4,6 @@ import icon2 from "../../../../public/assets/icon3.png";
 import icon3 from "../../../../public/assets/icon8.png";
 import icon4 from "../../../../public/assets/icon9.png";
 import icon5 from "../../../../public/assets/icon10.png";
-
 import "./Services.css";
 
 const Services = () => {

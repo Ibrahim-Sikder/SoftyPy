@@ -7,6 +7,12 @@ import About from "../pages/About/About";
 import Client from "../pages/Client/Client";
 import Contact from "../pages/Contact/Contact";
 import SingleService from "../pages/SingleService/SingleService";
+import DashboardLayout from "../Layout/DashboardLayout";
+import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
+import ServiceData from "../pages/Dashboard/Services/ServiceData";
+import AddServices from "../pages/Dashboard/Services/AddServices";
+
+
 
 
 
@@ -49,6 +55,26 @@ export const router = createBrowserRouter([
           element: <SingleService/>
         },
         
-      ]
+      ],
+      
     },
+    {
+      path: 'dashboard',
+      element: <DashboardLayout/>,
+      children: [
+        {
+          path: '/dashboard',
+          element: <Dashboard/>
+        },
+        {
+          path: 'serviceData',
+          element:<ServiceData/>
+        },
+        {
+          path: 'addservice',
+          element: <AddServices/>
+        }
+      ]
+    }
+  
   ]);
