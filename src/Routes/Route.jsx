@@ -11,6 +11,21 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
 import ServiceData from "../pages/Dashboard/Services/ServiceData";
 import AddServices from "../pages/Dashboard/Services/AddServices";
+import UpdateServices from "../pages/Dashboard/Services/UpdateServices";
+import AddAbout from "../pages/Dashboard/Dashboard/AddAbout/AddAbout";
+import ViewAbout from "../pages/Dashboard/Dashboard/AddAbout/ViewAbout";
+import UpdateAbout from "../pages/Dashboard/Dashboard/AddAbout/UpdateAbout";
+import ViewContact from "../pages/Dashboard/Dashboard/ContactUs/ViewContact";
+import AddContact from "../pages/Dashboard/Dashboard/ContactUs/AddContact";
+import UpdateContact from "../pages/Dashboard/Dashboard/ContactUs/UpdateContact";
+import ViewPortFolio from "../pages/Dashboard/Dashboard/PortFolio/ViewPortFolio";
+import AddPortFolio from "../pages/Dashboard/Dashboard/PortFolio/AddPortFolio";
+import UpdatePortFolio from "../pages/Dashboard/Dashboard/PortFolio/UpdatePortFolio";
+import Profile from "../pages/Dashboard/Profile/Profile";
+import Review from "../components/Review/Review";
+import Reviews from "../pages/Dashboard/Review/Reviews";
+import Signup from "../pages/Signup/Signup";
+import Login from "../pages/Login/Login";
 
 
 
@@ -54,6 +69,14 @@ export const router = createBrowserRouter([
           path: '/singleService',
           element: <SingleService/>
         },
+        {
+          path: '/signup',
+          element: <Signup/>
+        },
+        {
+          path: '/login',
+          element: <Login/>
+        },
         
       ],
       
@@ -73,7 +96,55 @@ export const router = createBrowserRouter([
         {
           path: 'addservice',
           element: <AddServices/>
-        }
+        },
+        {
+          path: 'updatedservice',
+          element: <UpdateServices/>
+        },
+        {
+          path: 'about',
+          element: <ViewAbout/>
+        },
+        {
+          path: 'addabout',
+          element: <AddAbout/>
+        },
+        {
+          path: 'updateAbout',
+          element: <UpdateAbout/>
+        },
+        {
+          path: 'contact',
+          element: <ViewContact/>
+        },
+        {
+          path: 'addcontact',
+          element: <AddContact/>
+        },
+        {
+          path: 'updateContact',
+          element: <UpdateContact/>
+        },
+        {
+          path: 'portfolio',
+          element: <ViewPortFolio/>
+        },
+        {
+          path: 'addPortfolio',
+          element: <AddPortFolio/>
+        },
+        {
+          path: 'updatePortfolio',
+          element: <UpdatePortFolio/>
+        },
+        {
+          path: 'profile',
+          element: <Profile/>
+        },
+        {
+          path: 'review',
+          element: <Reviews/>
+        },
       ]
     }
   

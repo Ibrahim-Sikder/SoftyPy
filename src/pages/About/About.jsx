@@ -19,6 +19,7 @@ import PortfolioCountdown from "../Home/CountDown/CountDown";
 import ManageMent from "./ManageMent/ManageMent";
 import NavBar from "../Shared/NavBar/NavBar";
 import { Link } from "react-router-dom";
+import Subscribe from "../../components/Subscribe/Subscribe";
 const About = () => {
   const ref = useRef(null);
   useEffect(() => {
@@ -257,6 +258,7 @@ const About = () => {
 
         <PortfolioCountdown />
       </div>
+      <Subscribe/>
     </section>
   );
 };

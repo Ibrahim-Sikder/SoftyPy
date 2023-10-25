@@ -31,6 +31,7 @@ const AuthProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
+
     //   2. Update Name
     const updateUserProfile = (name, photo) => {
         setLoading(true)
@@ -83,6 +84,7 @@ const AuthProvider = ({ children }) => {
             unsubscribe()
         }
     }, [])
+  
 
     const authInfo = {
         user,

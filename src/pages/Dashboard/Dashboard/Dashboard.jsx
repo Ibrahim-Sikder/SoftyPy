@@ -141,7 +141,7 @@ const Dashboard = () => {
       <div className="dashBoardRight  ">
         <div className="nameWrap px-3 py-3">
           <div className="projectName">
-            <h2 className="text-secondary">Seller Dashboard</h2>
+            <h2 className="text-secondary">Admin Dashboard</h2>
           </div>
         </div>
        

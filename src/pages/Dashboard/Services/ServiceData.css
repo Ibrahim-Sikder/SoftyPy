@@ -86,3 +86,26 @@
   justify-content: center;
   align-items: center;
 }
+.singleForm textarea, .inputField:focus{
+  outline: none;
+
+}
+@media only screen and (max-width:768px) {
+  .addServicesWrap {
+    width: 700px;
+  }
+  
+}
+@media only screen and (max-width:500px) {
+  .addServicesWrap {
+    width: 400px;
+    padding:20px 15px;
+  }
+  
+}
+@media only screen and (max-width:400px) {
+  .addServicesWrap {
+    width: 300px;
+  }
+  
+}

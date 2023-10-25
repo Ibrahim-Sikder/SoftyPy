@@ -1,19 +1,18 @@
+import { FaTrashAlt, FaEdit, FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
-import { FaTrashAlt, FaEdit, FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
-
-import img from "../../../../public/assets/dev.png";
+import img from "../../../../../public/assets/hero.png";
 import TextField from "@mui/material/TextField";
 import { Link } from "react-router-dom";
 
-const ServiceData = () => {
+const ViewPortFolio = () => {
     return (
         <div className="mt-5 mb-24 w-full">
         <div className="flex items-center justify-between px-8 mb-5">
           <TextField id="outlined-basic" label="Search " variant="outlined" />
           <div className='addHotel'>
-            <Link to='/dashboard/addservice'>
+            <Link to='/dashboard/addPortfolio'>
             <button>
-              <span className="text-xl font-bold">+</span> Add Services
+              <span className="text-xl font-bold">+</span> Add Portfolio
             </button>
             </Link>
           </div>
@@ -23,7 +22,7 @@ const ServiceData = () => {
             <thead className='tableWrap'>
               <tr>
                 <th>Image</th>
-                <th>Top Service Name</th>
+                <th>Portfolio Description </th>
                 <th>Title</th>
                 <th>Sub title </th>
                 <th>Date</th>
@@ -47,7 +46,7 @@ const ServiceData = () => {
                 <td>3/6/23</td>
                 <td >
                  <div className='editIconWrap'>
-                 <Link to='/dashboard/updatedservice'> 
+                 <Link to='/dashboard/updatePortfolio'> 
                   <FaEdit className='editIcon' />
                  </Link>
                  </div>
@@ -66,7 +65,7 @@ const ServiceData = () => {
         <div className='pagination'>
             <div className='paginationBtn'>
               <button>
-                <FaLongArrowAltLeft className='arrowLeft' />
+                <FaArrowLeft className='arrowLeft' />
               </button>
               <button>1</button>
               <button>2</button>
@@ -74,7 +73,7 @@ const ServiceData = () => {
               <button>4</button>
               <button>5</button>
               <button>
-                <FaLongArrowAltRight className='arrowRight' />
+                <FaArrowRight className='arrowRight' />
                 
               </button>
             </div>
@@ -83,4 +82,4 @@ const ServiceData = () => {
     );
 };
 
-export default ServiceData;
+export default ViewPortFolio;

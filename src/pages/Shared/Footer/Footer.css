@@ -101,6 +101,10 @@
     line-height: 30px;
     border-radius: 100%;
 }
+.subscribeWraps{
+    width:1300px;
+    margin:0 auto;
+}
 
 @media only screen and (max-width:1024px){
     .footerWrap{
@@ -108,6 +112,10 @@
         padding: 0px 30px;
     
     }
+    .subscribeWraps{
+        width:100%;
+    }
+    
     .footerTopBarContent {
         align-items: center;
         padding: 13px 0px 31px 0;

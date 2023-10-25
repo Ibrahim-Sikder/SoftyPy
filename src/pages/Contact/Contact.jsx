@@ -13,6 +13,7 @@ import NavBar from "../Shared/NavBar/NavBar";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import Subscribe from "../../components/Subscribe/Subscribe";
 const Contact = () => {
   const { register, formState: { errors }, handleSubmit } = useForm();
   const navigate = useNavigate()
@@ -71,8 +72,8 @@ const onSubmit = (data) => {
                 </div>
                 <div className="ml-3  text-white">
                   <h2 className="text-3xl mt-2 md:mt-0 md:text-4xl font-bold capitalize">
-                  Need Exceptional Services? call us 24/7
-                  </h2>
+                  Need Exceptional  Services? <br /> call us 24/7
+                  </h2> 
                   <span className="mt-2 block">+880 1762-380594</span>
                 </div>
               </div>
@@ -222,6 +223,7 @@ const onSubmit = (data) => {
           ></Iframe>
         </section>
       </div>
+      <Subscribe/>
     </div>
   );
 };

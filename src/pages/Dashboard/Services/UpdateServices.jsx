@@ -1,9 +1,9 @@
 import "./ServiceData.css";
 
-const AddServices = () => {
+const UpdateServices = () => {
   return (
     <div className="mt-10">
-      <h2 className="text-3xl font-bold text-center">Add Services</h2>
+      <h2 className="text-3xl font-bold text-center">Update Services</h2>
       <div className="w-full mx-auto addServicesWrap">
         <form>
           <div className="formControl">
@@ -95,7 +95,7 @@ const AddServices = () => {
 
           <div className="formControl">
             <button className="submitBtn" type="submit">
-              Submit
+              Update
             </button>
           </div>
         </form>
@@ -104,4 +104,4 @@ const AddServices = () => {
   );
 };
 
-export default AddServices;
+export default UpdateServices;

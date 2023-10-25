@@ -8,6 +8,7 @@ import Choos2 from "./ChoosUs/Choose2";
 import TimeLine from "./TimeLine/TimeLine";
 import CountDown from "./CountDown/CountDown";
 import HeroSection from "../../components/Banner/HeroSection/HeroSection";
+import Subscribe from "../../components/Subscribe/Subscribe";
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
       <Brand />
       <Review />
       <CountDown />
+      <Subscribe/>
     </div>
   );
 };

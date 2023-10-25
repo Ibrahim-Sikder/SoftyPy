@@ -28,37 +28,32 @@ const DashboardLayout = () => {
               </Link>
             </li>
             <li>
-              <Link to="/dashboard/allsellers" className="shadow-md">
+              <Link to="" className="shadow-md">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/dashboard/allbuyers" className="shadow-md">
+              <Link to="/dashboard/serviceData" className="shadow-md">
                 Services
               </Link>
             </li>
             <li>
-              <Link to="/dashboard/myOrders" className="shadow-md">
+              <Link to="/dashboard/about" className="shadow-md">
                 About Us
               </Link>
             </li>
             <li>
-              <Link to="/dashboard/myreviews" className="shadow-md">
+              <Link to="/dashboard/contact" className="shadow-md">
                 Contact Us 
               </Link>
             </li>
             <li>
-              <Link to="/dashboard/wishlist" className="shadow-md">
-                My Favourite Items
+              <Link to="/dashboard/review" className="shadow-md">
+               Review
               </Link>
             </li>
             <li>
-              <Link to="/dashboard/reporteditems" className="shadow-md">
-                Happy Client
-              </Link>
-            </li>
-            <li>
-              <Link to="/dashboard/addproperties" className="shadow-md">
+              <Link to="/dashboard/profile" className="shadow-md">
                Portfolio 
               </Link>
             </li>

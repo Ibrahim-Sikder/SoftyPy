@@ -28,7 +28,7 @@ class PortfolioCountdown extends Component {
       if (this.state[countType] === totalCounts[countType]) {
         clearInterval(this.countdownInterval);
       }
-    }, 1000); // Adjust the interval duration as needed
+    }, 500); // Adjust the interval duration as needed
   };
 
   componentDidMount() {
