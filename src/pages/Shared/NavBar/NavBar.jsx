@@ -85,6 +85,9 @@ const NavBar = () => {
                 {" "}
                 <li className="navbar-item">Contact Us </li>
               </Link>
+              <Link to="/signup">
+                <li className="navbar-item">Sign Up </li>
+              </Link>
             </ul>
 
     </div>
