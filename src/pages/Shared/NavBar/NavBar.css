@@ -25,18 +25,19 @@
   font-weight: bold;
   position: relative;
 }
+
 .sticky {
   width: 1300px;
   margin: 0 auto;
   background: linear-gradient(to right, #541283fb, #ff5400);
   width: 100%;
   color: white ;
-  /* box-shadow: #f87015 0px 5px 15px; */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 99999;
+  padding: 20px 30px;
 }
 .sticky .navbar-list,
 .sticky .logo {
@@ -65,12 +66,48 @@
 .mobileMenuActive {
   display: none;
 }
+.usersWrap{
+  position: relative;
+}
+.userItems{
+  position: absolute;
+  background: #F87015;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: 3px;
+  display: none;
+  justify-content: center;
+}
+.usersWrap:hover .userItems{
+  display: block;
+}
+.user, .user2{
+  width:3.12rem;
+  height:3.12rem;
+  border-radius: 100%;
+  
+}
+.user2{
+  color:white;
+  border:1px solid #ffffff;
+}
+.security{
+
+}
 
 @media only screen and (max-width: 1024px) {
   .navbar,
   .sticky {
     width:100%;
   }
+  .navbar{
+    padding:10px 30px;
+  }
+  .security {
+    position: relative;
+    left: -44%;
+}
   .navbar-list {
     display: none;
   }
@@ -112,8 +149,8 @@
     cursor: pointer;
     transition: all 0.5s linear(-0.47 -53.68%, 1 100%);
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 14px;
+    right: 21px;
     z-index: 999999;
   }
   .bar div {
@@ -152,12 +189,23 @@
   }
 }
 
-@media  only screen and (max-width:400px) {
+@media only screen and (max-width:500px){
   .navbar {
-    padding: 15px 15px;
+    padding: 5px 8px;
 }
-.bar {
-  right: 15px;
+.bar{
+  top: 12px;
+  right: 1px;
+}
+.user, .user2 {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+}
+@media  only screen and (max-width:400px) {
+
+  .security {
+    left: -40%;
 }
   
 }

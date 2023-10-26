@@ -34,11 +34,9 @@ const AuthProvider = ({ children }) => {
 
     //   2. Update Name
     const updateUserProfile = (name, photo) => {
-        setLoading(true)
         return updateProfile(auth.currentUser, {
-            displayName: name,
-            photoURL: photo,
-        })
+            displayName: name, photoURL: photo
+        });
     }
 
     //   3. Email Verify

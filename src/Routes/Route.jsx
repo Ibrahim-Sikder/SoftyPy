@@ -98,8 +98,9 @@ export const router = createBrowserRouter([
           element: <AddServices/>
         },
         {
-          path: 'updatedservice',
-          element: <UpdateServices/>
+          path: 'updatedservice/:id',
+          element: <UpdateServices/>,
+          loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
         },
         {
           path: 'about',

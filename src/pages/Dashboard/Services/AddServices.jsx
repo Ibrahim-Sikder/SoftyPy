@@ -1,16 +1,65 @@
+import { useForm } from "react-hook-form";
 import "./ServiceData.css";
+import Swal from "sweetalert2";
 
 const AddServices = () => {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => {
+    const name = data.name;
+    const title = data.title;
+    const subtitle = data.title;
+    const topservicetitle = data.topservicetitle;
+    const topserviceDescription = data.topserviceDescription;
+    const whatWedoDescription = data.whatWedoDescription;
+    const productsDescription = data.productsDescription;
+    const image = data.image ;
+    const description = data.description;
+    const newServices = {
+      name,
+      title,
+      subtitle,
+      topservicetitle,
+      topserviceDescription,
+      whatWedoDescription,
+      productsDescription,
+      image,
+      description,
+    
+    }
+
+
+  fetch('http://localhost:5000/services', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify(newServices)
+  })
+  .then(res=>res.json())
+  .then(data=>{
+    if(data.insertedId){
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Service added Successfully !',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }
+  })
+   };
+   
   return (
     <div className="mt-10">
       <h2 className="text-3xl font-bold text-center">Add Services</h2>
       <div className="w-full mx-auto addServicesWrap">
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="formControl">
             <div className="singleForm">
               <label>Name </label>
               <input
-                name="country"
+               {...register("name", { required: true })}
+                name="name"
                 placeholder="Name"
                 type="text"
                 className="inputField"
@@ -20,7 +69,8 @@ const AddServices = () => {
             <div className="singleForm">
               <label> Title </label>
               <input
-                name="city"
+               {...register("title", { required: true })}
+                name="title"
                 placeholder="Title"
                 type="text"
                 className="inputField"
@@ -30,7 +80,8 @@ const AddServices = () => {
             <div className="singleForm">
               <label> Sub Title </label>
               <input
-                name="city"
+               {...register("subtitle", { required: true })}
+                name="subtitle"
                 placeholder="Sub Title"
                 type="text"
                 className="inputField"
@@ -40,7 +91,8 @@ const AddServices = () => {
             <div className="singleForm">
               <label>Top Service Title </label>
               <input
-                name="city"
+               {...register("topservicetitle", { required: true })}
+                name="topservicetitle"
                 placeholder="Top Service Title"
                 type="text"
                 className="inputField"
@@ -50,7 +102,8 @@ const AddServices = () => {
             <div className="singleForm">
               <label>Top Service Description </label>
               <input
-                name="city"
+                {...register("topserviceDescription", { required: true })}
+                name="topserviceDescription"
                 placeholder="Top Service Description "
                 type="text"
                 className="inputField"
@@ -60,7 +113,8 @@ const AddServices = () => {
             <div className="singleForm">
               <label>What we do Descripton </label>
               <input
-                name="city"
+                 {...register("whatWedoDescription", { required: true })}
+                name="whatWedoDescription"
                 placeholder="What we do Descripton "
                 type="text"
                 className="inputField"
@@ -70,7 +124,8 @@ const AddServices = () => {
             <div className="singleForm">
               <label>Products Descripton </label>
               <input
-                name="city"
+                {...register("productsDescription", { required: true })}
+                name="productsDescription"
                 placeholder="Products Descripton "
                 type="text"
                 className="inputField"
@@ -78,9 +133,10 @@ const AddServices = () => {
               />
             </div>
             <div className="singleForm">
-              <label>Products Descripton </label>
+              <label>Image </label>
               <input
-                name="city"
+               {...register("image", { required: true })}
+                name="image"
                 placeholder="Products Descripton "
                 type="file"
                 className="inputField"
@@ -89,7 +145,9 @@ const AddServices = () => {
             </div>
             <div className="singleForm">
                 <label> Description </label> 
-                <textarea name="description" placeholder="Description" id="" cols="30" rows="10"  autoComplete="off"></textarea>
+                <textarea
+                 {...register("description", { required: true })}
+                name="description" placeholder="Description" id="" cols="30" rows="10"  autoComplete="off"></textarea>
             </div>
           </div>
 

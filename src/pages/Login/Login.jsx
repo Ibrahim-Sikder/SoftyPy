@@ -10,10 +10,10 @@ const Login = () => {
   const {signin} = useContext(AuthContext)
   const navigate = useNavigate()
     const { register, handleSubmit } = useForm();
-
-  const onSubmit = () => {
-   signin()
-   .then(()=>{
+  const onSubmit = (data) => {
+   signin(data.email, data.password)
+   .then((data)=>{
+    console.log(data)
     Swal.fire({
       position: 'center',
       icon: 'success',
