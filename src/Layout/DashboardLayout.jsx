@@ -38,6 +38,11 @@ const DashboardLayout = () => {
               </Link>
             </li>
             <li>
+              <Link to="/dashboard/singleServices" className="shadow-md">
+                Add Single Services
+              </Link>
+            </li>
+            <li>
               <Link to="/dashboard/about" className="shadow-md">
                 About Us
               </Link>
@@ -55,6 +60,11 @@ const DashboardLayout = () => {
             <li>
               <Link to="/dashboard/profile" className="shadow-md">
                Portfolio 
+              </Link>
+            </li>
+            <li>
+              <Link to="/dashboard/orders" className="shadow-md">
+               Customer Order List
               </Link>
             </li>
           

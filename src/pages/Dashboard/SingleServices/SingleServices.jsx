@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import { useQuery } from "react-query";
 import Swal from "sweetalert2";
 
-const ServiceData = () => {
+const SingleServices = () => {
   const {data: services = [], refetch} = useQuery(['services'], async ()=>{
-    const res = await fetch('http://localhost:5000/services');
+    const res = await fetch('http://localhost:5000/singleservices');
     return res.json()
   })
 
@@ -24,7 +24,7 @@ const ServiceData = () => {
         confirmButtonText: 'Yes, delete it!'
       }).then((result) => {
         if (result.isConfirmed) {
-            fetch(`http://localhost:5000/services/${id}`,{
+            fetch(`http://localhost:5000/singleservices/${id}`,{
                 method: "DELETE"
             })
             .then(res=>res.json())
@@ -52,9 +52,9 @@ const ServiceData = () => {
         <div className="flex items-center justify-between px-8 mb-5">
           <TextField id="outlined-basic" label="Search " variant="outlined" />
           <div className='addHotel'>
-            <Link to='/dashboard/addservice'>
+            <Link to='/dashboard/addSingleServices'>
             <button>
-              <span className="text-xl font-bold">+</span> Add Services 
+              <span className="text-xl font-bold">+</span> Add Single Services 
             </button>
             </Link>
           </div>
@@ -65,7 +65,7 @@ const ServiceData = () => {
             <thead className='tableWrap'>
               <tr>
                 <th>Image</th>
-                <th>Top Service Name</th>
+                <th>Category </th>
                 <th>Title</th>
                 <th>Sub title </th>
                 <th colSpan={2}>Action</th>
@@ -83,12 +83,12 @@ const ServiceData = () => {
                       />
                     </div>
                   </td>
-                  <td>{service.title} </td>
-                  <td>Web & Mobile App Development </td>
+                  <td>{service.category} </td>
+                  <td>{service.title}</td>
                   <td>{service.subTitle} </td>
                   <td >
                    <div className='editIconWrap'>
-                   <Link to={`/dashboard/updatedservice/${service._id}`}> 
+                   <Link to={`/dashboard/updatedSingleServices/${service._id}`}> 
                     <FaEdit className='editIcon' />
                    </Link>
                    </div>
@@ -125,4 +125,4 @@ const ServiceData = () => {
     );
 };
 
-export default ServiceData;
+export default SingleServices;

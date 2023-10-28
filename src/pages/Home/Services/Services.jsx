@@ -1,47 +1,47 @@
 import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
-import icon from "../../../../public/assets/icon6.png";
-import icon2 from "../../../../public/assets/icon3.png";
-import icon3 from "../../../../public/assets/icon8.png";
-import icon4 from "../../../../public/assets/icon9.png";
-import icon5 from "../../../../public/assets/icon10.png";
 import "./Services.css";
+import { FaArrowRight } from "react-icons/fa";
+import usePopularServices from "../../../hooks/usePopularServices";
 
 const Services = () => {
+const [singleservices] = usePopularServices()
+// const category = singleservices.filter(item=> item)
+
   
-  const cardData = [
-    {
-      id: 1,
-      img: icon,
-      name: "Web & APP Development",
-      desc:"SoftyPy specializes in crafting dynamic websites and innovative mobile apps, delivering a seamless user experience and digital solutions tailored to your needs."
-    },
-    {
-      id: 2,
-      img: icon2,
-      name: "ERP Solutions",
-      desc: "ERP Solutions optimize business operations through integrated software, fostering efficiency and informed decision-making for sustained growth."
-    },
+  // const cardData = [
+  //   {
+  //     id: 1,
+  //     img: icon,
+  //     name: "Web & APP Development",
+  //     desc:"SoftyPy specializes in crafting dynamic websites and innovative mobile apps, delivering a seamless user experience and digital solutions tailored to your needs."
+  //   },
+  //   {
+  //     id: 2,
+  //     img: icon2,
+  //     name: "ERP Solutions",
+  //     desc: "ERP Solutions optimize business operations through integrated software, fostering efficiency and informed decision-making for sustained growth."
+  //   },
     
-    {
-      id: 3,
-      img: icon5,
-      name: "UI/UX Design ​",
-      desc: "At SoftyPy, we craft exceptional UI/UX designs that harmonize aesthetics and functionality, ensuring delightful user experiences for your digital products."
-    },
-    {
-      id: 4,
-      img: icon3,
-      name: "Digital Marketing",
-      desc:"SoftyPy drives business growth with data-driven digital marketing strategies, elevating your online presence and engaging target audiences for lasting results."
-    },
-    {
-      id: 5,
-      img: icon4,
-      name: "SEO ",
-      desc: 'SoftyPy SEO services can build your high rankings and achieving your organic traffic & improve search engine result.'
-    },
+  //   {
+  //     id: 3,
+  //     img: icon5,
+  //     name: "UI/UX Design ​",
+  //     desc: "At SoftyPy, we craft exceptional UI/UX designs that harmonize aesthetics and functionality, ensuring delightful user experiences for your digital products."
+  //   },
+  //   {
+  //     id: 4,
+  //     img: icon3,
+  //     name: "Digital Marketing",
+  //     desc:"SoftyPy drives business growth with data-driven digital marketing strategies, elevating your online presence and engaging target audiences for lasting results."
+  //   },
+  //   {
+  //     id: 5,
+  //     img: icon4,
+  //     name: "SEO ",
+  //     desc: 'SoftyPy SEO services can build your high rankings and achieving your organic traffic & improve search engine result.'
+  //   },
     
-  ];
+  // ];
   return (
     <div className="servicesWraps">
       <div className="">
@@ -67,21 +67,24 @@ const Services = () => {
         <div className="ourServicesRightSide">
           <div>
             <div className="cardsWrap">
-              {cardData.map((card) => (
+              {singleservices.map((card) => (
                 <div key={card.id} className="cards">
                   <div className="inner-box">
                     <div className="cards-front cards-front5">
                       <div className="iconWrap">
-                        <img src={card.img} alt="icon" />
+                        <img src={card.image} alt="icon" />
                       </div>
-                      <p className="mt-2 font-bold">{card.name}</p>
+                      <p className="mt-2 font-bold">{card.title}</p>
                     </div>
                     <div className="cards-back text-white">
-                      <div className="cards-back-content md:px-3">
-                        <b className="block"> {card.name}</b>
+                      <div className="cards-back-content md:px-3 text-center">
+                        <b className="block"> {card.title}</b>
                         <small className="my-1 md:my-3">
-                         {card.desc}
+                         {card.subtitle}
                         </small>
+                        <div className="flex items-center justify-center">
+                          <span>Read More </span><small><FaArrowRight/></small>
+                          </div>
                       </div>
                     </div>
                   </div>

@@ -22,10 +22,13 @@ import ViewPortFolio from "../pages/Dashboard/Dashboard/PortFolio/ViewPortFolio"
 import AddPortFolio from "../pages/Dashboard/Dashboard/PortFolio/AddPortFolio";
 import UpdatePortFolio from "../pages/Dashboard/Dashboard/PortFolio/UpdatePortFolio";
 import Profile from "../pages/Dashboard/Profile/Profile";
-import Review from "../components/Review/Review";
 import Reviews from "../pages/Dashboard/Review/Reviews";
 import Signup from "../pages/Signup/Signup";
 import Login from "../pages/Login/Login";
+import SingleServices from "../pages/Dashboard/SingleServices/SingleServices";
+import AddSingleServices from "../pages/Dashboard/SingleServices/AddSingleServices";
+import UpdateSingleServices from "../pages/Dashboard/SingleServices/UpdateSingleServices";
+import CustomerOrderList from "../pages/Dashboard/CustomerOrder/CustomerOrderList";
 
 
 
@@ -145,6 +148,23 @@ export const router = createBrowserRouter([
         {
           path: 'review',
           element: <Reviews/>
+        },
+        {
+          path: 'singleServices',
+          element: <SingleServices/>
+        },
+        {
+          path: 'addSingleServices',
+          element: <AddSingleServices/>
+        },
+        {
+          path: 'updatedSingleServices/:id',
+          element: <UpdateSingleServices/>,
+          loader: ({params})=>fetch(`http://localhost:5000/singleServices/${params.id}`)
+        },
+        {
+          path: 'orders',
+          element: <CustomerOrderList/>,
         },
       ]
     }

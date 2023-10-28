@@ -25,7 +25,7 @@ const onSubmit = (data) => {
     message: data.message
   }
 
-  fetch('http://localhost:5000/users', {
+  fetch('http://localhost:5000/orders', {
     method: "POST",
     headers: {
       'content-type': 'application/json'
@@ -108,7 +108,7 @@ const onSubmit = (data) => {
               {errors.name && <p className="text-red-500 ">Name is required!</p>}
               <div className="formControl">
              
-                <label> Email </label>
+                <label> Email <span className="text-red-500 text-xl">*</span></label>
                 <input
                   {...register("email", { required: true })}
                   name='email'
@@ -141,7 +141,7 @@ const onSubmit = (data) => {
                 ></textarea>
               </div>
               <div>
-                <button className="sendMessageBtn">Send Message </button>
+                <button className="sendMessageBtn">Submit Order </button>
               </div>
             </form>
           </div>

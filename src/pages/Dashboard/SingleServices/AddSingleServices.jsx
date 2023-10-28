@@ -1,16 +1,15 @@
 import { useForm } from "react-hook-form";
-import "./ServiceData.css";
+import './SingleServices.css'
 import Swal from "sweetalert2";
 
 
 const img_hosting_token = import.meta.env.VITE_IMAGE_UPLOAD_TOKEN
-const AddServices = () => {
+const AddSingleServices = () => {
   const { register,reset, handleSubmit } = useForm();
   const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`;
 
   const onSubmit = (data) => {
-
-    
+ 
     const formData = new FormData();
     formData.append("image", data.image[0]);
 
@@ -21,39 +20,34 @@ const AddServices = () => {
       .then((res) => res.json())
       .then((imageData) => {
         const imageUrl = imageData.data.url;
-        const {name, title, subtitle, topserviceDescription, topservicetitle,whatWedoDescription, productsDescription,description, } = data
-        const newServices = {
-          name,
+        const {title, subtitle, category } = data
+        const newSingleServices = {
           title,
           subtitle,
-          topservicetitle,
-          topserviceDescription,
-          whatWedoDescription,
-          productsDescription,
+          category,
           image: imageUrl,
-          description,
         
         }
-        console.log(newServices)
-        fetch('http://localhost:5000/services', {
+        console.log(newSingleServices)
+        fetch('http://localhost:5000/singleservices', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
           },
-          body: JSON.stringify(newServices)
+          body: JSON.stringify(newSingleServices)
         })
         .then(res=>res.json())
         .then(data=>{
-          console.log(data)
           if(data.insertedId){
             Swal.fire({
               position: 'center',
               icon: 'success',
-              title: 'Service added Successfully !',
+              title: 'Single Services added Successfully !',
               showConfirmButton: false,
               timer: 1500
             })
           }
+          reset()
         })
       
       })
@@ -72,20 +66,25 @@ const AddServices = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="formControl">
             <div className="singleForm">
-              <label>Name </label>
-              <input
-               {...register("name", { required: true })}
-                name="name"
-                placeholder="Name"
-                type="text"
-                className="inputField"
-                autoComplete="off"
-              />
+              <label>Category </label>
+              <select
+              defaultValue="Pick One"
+              {...register("category", { required: true })}
+              className="select select-bordered"
+              autoComplete="off"
+              name='category'
+            >
+                <option>Development</option>
+                <option>ERP</option>
+                <option>Design</option>
+                <option>Digital</option>
+                <option>SEO</option>
+            </select>
             </div>
             <div className="singleForm">
-              <label> Title </label>
+              <label>Title </label>
               <input
-               {...register("title", { required: true })}
+                {...register("title", { required: true })}
                 name="title"
                 placeholder="Title"
                 type="text"
@@ -94,55 +93,11 @@ const AddServices = () => {
               />
             </div>
             <div className="singleForm">
-              <label> Sub Title </label>
+              <label>Sub Title </label>
               <input
-               {...register("subtitle", { required: true })}
+                {...register("subtitle", { required: true })}
                 name="subtitle"
-                placeholder="Sub Title"
-                type="text"
-                className="inputField"
-                 autoComplete="off"
-              />
-            </div>
-            <div className="singleForm">
-              <label>Top Service Title </label>
-              <input
-               {...register("topservicetitle", { required: true })}
-                name="topservicetitle"
-                placeholder="Top Service Title"
-                type="text"
-                className="inputField"
-                 autoComplete="off"
-              />
-            </div>
-            <div className="singleForm">
-              <label>Top Service Description </label>
-              <input
-                {...register("topserviceDescription", { required: true })}
-                name="topserviceDescription"
-                placeholder="Top Service Description "
-                type="text"
-                className="inputField"
-                 autoComplete="off"
-              />
-            </div>
-            <div className="singleForm">
-              <label>What we do Descripton </label>
-              <input
-                 {...register("whatWedoDescription", { required: true })}
-                name="whatWedoDescription"
-                placeholder="What we do Descripton "
-                type="text"
-                className="inputField"
-                 autoComplete="off"
-              />
-            </div>
-            <div className="singleForm">
-              <label>Products Descripton </label>
-              <input
-                {...register("productsDescription", { required: true })}
-                name="productsDescription"
-                placeholder="Products Descripton "
+                placeholder="Sub Title  "
                 type="text"
                 className="inputField"
                  autoComplete="off"
@@ -178,4 +133,4 @@ const AddServices = () => {
   );
 };
 
-export default AddServices;
+export default AddSingleServices;

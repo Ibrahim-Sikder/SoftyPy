@@ -1,5 +1,4 @@
 import "./NavBar.css";
-import { FaUserLock } from "react-icons/fa";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
@@ -7,7 +6,6 @@ import { AuthContext } from "../../../contexts/AuthProvider";
 import team from "../../../../public/assets/team11.jpeg";
 import login from "../../../../public/assets/login6.png";
 const NavBar = () => {
-  const [stickyMenu, setStickyMenu] = useState(false);
   const { user, logout } = useContext(AuthContext);
   const [mobileMenu, setMobileMenu] = useState(true);
   const toggleMobileMenu = () => {

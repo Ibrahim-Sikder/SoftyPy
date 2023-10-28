@@ -128,7 +128,7 @@ table {
 .drawwerLeftSide {
     width: 24% !important;
 }
-input:focus, textarea:focus{
+input:focus, textarea:focus, select:focus{
     outline: none;
 }
 .countdown > * {

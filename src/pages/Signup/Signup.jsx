@@ -11,8 +11,9 @@ const Signup = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     createUser(data.email, data.password)
-      .then((data) => {
-     
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser)
         updateUserProfile(data.name, data.photoURL)
           .then(() => {
             console.log(data)
@@ -50,6 +51,17 @@ const Signup = () => {
                   {...register("name", { required: true })}
                   name="name"
                   placeholder="Name"
+                  type="text"
+                  className="inputField"
+                  autoComplete="off"
+                />
+              </div>
+              <div className="singleForm">
+                <label>Photo </label>
+                <input
+                  {...register("photo" )}
+                  name="photo"
+                  placeholder="Photo URL"
                   type="text"
                   className="inputField"
                   autoComplete="off"

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 
 const UpdateServices = () => {
   const services = useLoaderData();
-  const { _id, title, img, subTitle } = services;
+  const { _id} = services;
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
