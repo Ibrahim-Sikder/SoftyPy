@@ -5,43 +5,45 @@ import usePopularServices from "../../../hooks/usePopularServices";
 
 const Services = () => {
 const [singleservices] = usePopularServices()
-// const category = singleservices.filter(item=> item)
+const category = singleservices.filter(item=> item === "Development")
 
   
-  // const cardData = [
-  //   {
-  //     id: 1,
-  //     img: icon,
-  //     name: "Web & APP Development",
-  //     desc:"SoftyPy specializes in crafting dynamic websites and innovative mobile apps, delivering a seamless user experience and digital solutions tailored to your needs."
-  //   },
-  //   {
-  //     id: 2,
-  //     img: icon2,
-  //     name: "ERP Solutions",
-  //     desc: "ERP Solutions optimize business operations through integrated software, fostering efficiency and informed decision-making for sustained growth."
-  //   },
+  const cardData = [
+    {
+      id: 1,
+      img: icon,
+      category: 'Development'
+      name: "Web & APP Development",
+      desc:"SoftyPy specializes in crafting dynamic websites and innovative mobile apps, delivering a seamless user experience and digital solutions tailored to your needs."
+    },
+    {
+      id: 2,
+      img: icon2,
+      category: 'Design'
+      name: "ERP Solutions",
+      desc: "ERP Solutions optimize business operations through integrated software, fostering efficiency and informed decision-making for sustained growth."
+    },
     
-  //   {
-  //     id: 3,
-  //     img: icon5,
-  //     name: "UI/UX Design ​",
-  //     desc: "At SoftyPy, we craft exceptional UI/UX designs that harmonize aesthetics and functionality, ensuring delightful user experiences for your digital products."
-  //   },
-  //   {
-  //     id: 4,
-  //     img: icon3,
-  //     name: "Digital Marketing",
-  //     desc:"SoftyPy drives business growth with data-driven digital marketing strategies, elevating your online presence and engaging target audiences for lasting results."
-  //   },
-  //   {
-  //     id: 5,
-  //     img: icon4,
-  //     name: "SEO ",
-  //     desc: 'SoftyPy SEO services can build your high rankings and achieving your organic traffic & improve search engine result.'
-  //   },
+    {
+      id: 3,
+      img: icon5,
+      name: "UI/UX Design ​",
+      desc: "At SoftyPy, we craft exceptional UI/UX designs that harmonize aesthetics and functionality, ensuring delightful user experiences for your digital products."
+    },
+    {
+      id: 4,
+      img: icon3,
+      name: "Digital Marketing",
+      desc:"SoftyPy drives business growth with data-driven digital marketing strategies, elevating your online presence and engaging target audiences for lasting results."
+    },
+    {
+      id: 5,
+      img: icon4,
+      name: "SEO ",
+      desc: 'SoftyPy SEO services can build your high rankings and achieving your organic traffic & improve search engine result.'
+    },
     
-  // ];
+  ];
   return (
     <div className="servicesWraps">
       <div className="">

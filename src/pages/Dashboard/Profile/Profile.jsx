@@ -4,11 +4,6 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const Profile = () => {
 
-
-
-
-
-
     return (
         <div>
 
