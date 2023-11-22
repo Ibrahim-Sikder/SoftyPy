@@ -1,4 +1,3 @@
-
 import Brand from "../../components/Brand/Brand";
 import Review from "../../components/Review/Review";
 import SwiperTimeLine from "../../components/TimeLine/SwiperTimeLine";
@@ -10,20 +9,19 @@ import CountDown from "./CountDown/CountDown";
 import HeroSection from "../../components/Banner/HeroSection/HeroSection";
 import Subscribe from "../../components/Subscribe/Subscribe";
 
-
 const Home = () => {
   return (
     <div className="home">
-      <HeroSection/>
+      <HeroSection />
       <WhoWeAre />
       <SwiperTimeLine />
-        <TimeLine />
+      <TimeLine />
       <Choos2 />
       <Services />
       <Brand />
       <Review />
       <CountDown />
-      <Subscribe/>
+      <Subscribe />
     </div>
   );
 };

@@ -9,7 +9,6 @@ import {
 } from "react-icons/fa";
 import location from '../../../../public/assets/location.png'
 import { Link } from "react-router-dom";
-import Subscribe from "../../../components/Subscribe/Subscribe";
 const Footer = () => {
   return (
     <div className="footerWrap">

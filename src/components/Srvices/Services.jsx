@@ -1,11 +1,5 @@
 import SectionTitle from "../../pages/Shared/SectionTitle/SectionTitle";
 import { FaArrowRight } from "react-icons/fa";
-import web from "../../../public/assets/web.jpg";
-import digital from "../../../public/assets/digital.jpg";
-import seo from "../../../public/assets/seo.jpg";
-import content from "../../../public/assets/content.jpg";
-import social from "../../../public/assets/social.jpg";
-import add from "../../../public/assets/adds.jpg";
 import "./Services.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";

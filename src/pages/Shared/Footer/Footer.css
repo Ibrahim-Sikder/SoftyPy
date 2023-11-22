@@ -57,8 +57,29 @@
     font-size: 25px !important;
     color: #F87015;
 }
-.twiteer:nth-child(3){
-    background:red !important;
+.socialIcon{
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    background-color: red;
+    color:white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socialIcon:nth-child(1){
+    background-color: #355089 !important;
+}
+.socialIcon:nth-child(2){
+    background-color: #006BA3 !important;
+}
+.socialIcon:nth-child(3){
+    background-color: #00acee  !important;
+    color:#fff;
+}
+.socialIcon:nth-child(4){
+    background-color: #B91D1C !important;
 }
 .contactBtn{
     display: flex;
@@ -95,12 +116,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.socialIcon{
-    width:30px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 100%;
-}
+
 .subscribeWraps{
     width:1300px;
     margin:0 auto;
