@@ -35,138 +35,139 @@ import CustomerOrderList from "../pages/Dashboard/CustomerOrder/CustomerOrderLis
 
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      children: [
-        {
-            path: '/',
-            element: <Home></Home>
-        },
-        {
-            path: '/about',
-           element: <About/>
-        },
-        {
-          path: '/portfolio',
-          element: <Portfolio/>
-        },
-        {
-          path: 'services/:id',
-          element: <Services/>,
-          loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
-        },
-        {
-          path: '/services',
-          element: <Services></Services>
-        },
-        {
-          path: '/client',
-          element: <Client/>
-        },
-        {
-          path: '/contact',
-          element: <Contact/>
-        },
-        {
-          path: '/singleService',
-          element: <SingleService/>
-        },
-        {
-          path: '/signup',
-          element: <Signup/>
-        },
-        {
-          path: '/login',
-          element: <Login/>
-        },
-        
-      ],
-      
-    },
-    {
-      path: 'dashboard',
-      element: <DashboardLayout/>,
-      children: [
-        {
-          path: '/dashboard',
-          element: <Dashboard/>
-        },
-        {
-          path: 'serviceData',
-          element:<ServiceData/>
-        },
-        {
-          path: 'addservice',
-          element: <AddServices/>
-        },
-        {
-          path: 'updatedservice/:id',
-          element: <UpdateServices/>,
-          loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
-        },
-        {
-          path: 'about',
-          element: <ViewAbout/>
-        },
-        {
-          path: 'addabout',
-          element: <AddAbout/>
-        },
-        {
-          path: 'updateAbout',
-          element: <UpdateAbout/>
-        },
-        {
-          path: 'contact',
-          element: <ViewContact/>
-        },
-        {
-          path: 'addcontact',
-          element: <AddContact/>
-        },
-        {
-          path: 'updateContact',
-          element: <UpdateContact/>
-        },
-        {
-          path: 'portfolio',
-          element: <ViewPortFolio/>
-        },
-        {
-          path: 'addPortfolio',
-          element: <AddPortFolio/>
-        },
-        {
-          path: 'updatePortfolio',
-          element: <UpdatePortFolio/>
-        },
-        {
-          path: 'profile',
-          element: <Profile/>
-        },
-        {
-          path: 'review',
-          element: <Reviews/>
-        },
-        {
-          path: 'singleServices',
-          element: <SingleServices/>
-        },
-        {
-          path: 'addSingleServices',
-          element: <AddSingleServices/>
-        },
-        {
-          path: 'updatedSingleServices/:id',
-          element: <UpdateSingleServices/>,
-          loader: ({params})=>fetch(`http://localhost:5000/singleServices/${params.id}`)
-        },
-        {
-          path: 'orders',
-          element: <CustomerOrderList/>,
-        },
-      ]
-    }
-  
-  ]);
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: '/about',
+        element: <About />
+      },
+      {
+        path: '/portfolio',
+        element: <Portfolio />
+      },
+      {
+        path: 'services/:id',
+        element: <Services />,
+        loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+      },
+      {
+        path: '/services',
+        element: <Services></Services>
+      },
+      {
+        path: '/client',
+        element: <Client />
+      },
+      {
+        path: '/contact',
+        element: <Contact />
+      },
+      {
+        path: '/singleService',
+        element: <SingleService />
+      },
+      {
+        path: '/signup',
+        element: <Signup />
+      },
+      {
+        path: '/login',
+        element: <Login />
+      },
+
+    ],
+
+  },
+  {
+    path: 'dashboard',
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: '/dashboard',
+        element: <Dashboard />
+      },
+      {
+        path: 'serviceData',
+        element: <ServiceData />
+      },
+      {
+        path: 'addservice',
+        element: <AddServices />
+      },
+      {
+        path: 'updatedservice/:id',
+        element: <UpdateServices />,
+        loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+      },
+      {
+        path: 'about',
+        element: <ViewAbout />
+      },
+      {
+        path: 'addabout',
+        element: <AddAbout />
+      },
+      {
+        path: 'updateAbout/:id',
+        element: <UpdateAbout />,
+        loader: ({ params }) => fetch(`http://localhost:5000/about/${params.id}`)
+      },
+      {
+        path: 'contact',
+        element: <ViewContact />
+      },
+      {
+        path: 'addcontact',
+        element: <AddContact />
+      },
+      {
+        path: 'updateContact',
+        element: <UpdateContact />
+      },
+      {
+        path: 'portfolio',
+        element: <ViewPortFolio />
+      },
+      {
+        path: 'addPortfolio',
+        element: <AddPortFolio />
+      },
+      {
+        path: 'updatePortfolio',
+        element: <UpdatePortFolio />
+      },
+      {
+        path: 'profile',
+        element: <Profile />
+      },
+      {
+        path: 'review',
+        element: <Reviews />
+      },
+      {
+        path: 'singleServices',
+        element: <SingleServices />
+      },
+      {
+        path: 'addSingleServices',
+        element: <AddSingleServices />
+      },
+      {
+        path: 'updatedSingleServices/:id',
+        element: <UpdateSingleServices />,
+        loader: ({ params }) => fetch(`http://localhost:5000/singleServices/${params.id}`)
+      },
+      {
+        path: 'orders',
+        element: <CustomerOrderList />,
+      },
+    ]
+  }
+
+]);

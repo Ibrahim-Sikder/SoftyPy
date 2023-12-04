@@ -1,12 +1,69 @@
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+const img_hosting_token = import.meta.env.VITE_IMAGE_UPLOAD_TOKEN
 
 const AddAbout = () => {
-  const { register, formState: { errors }, handleSubmit } = useForm();
-  const navigate = useNavigate()
-const onSubmit = (data) => {
-  console.log(data)
-};
+  const { register, handleSubmit } = useForm();
+
+  const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`;
+  const onSubmit = (data) => {
+
+    const formData = new FormData();
+    formData.append("image", data.image[0]);
+
+    fetch(img_hosting_url, {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((imageData) => {
+        const imageUrl = imageData.data.url;
+
+        const { title, subtitle, managementName, position, managmentdescription, missionDescription, vissionDescription, teamName, teamPosition, description, teamDescriptions } = data
+        const aboutItem = {
+          title,
+          subtitle,
+          managementName,
+          position,
+          managmentdescription,
+          missionDescription,
+          vissionDescription,
+          teamName,
+          teamPosition,
+          image: imageUrl,
+          description,
+          teamDescriptions
+
+        }
+        fetch('http://localhost:5000/about', {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(aboutItem)
+        })
+          .then(res => res.json())
+          .then(data => {
+            console.log(data)
+            if (data.insertedId) {
+              Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'About Items added Successfully !',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            }
+          })
+
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+
+  };
+
 
   return (
     <div className="mt-10">
@@ -17,7 +74,7 @@ const onSubmit = (data) => {
             <div className="singleForm">
               <label>About Title </label>
               <input
-               {...register("name", { required: true })}
+                {...register("title", { required: true })}
                 name="title"
                 placeholder="About Title"
                 type="text"
@@ -51,7 +108,7 @@ const onSubmit = (data) => {
             <div className="singleForm">
               <label>Management Position </label>
               <input
-               {...register("position", { required: true })}
+                {...register("position", { required: true })}
                 name="position"
                 placeholder="Management Position  "
                 type="text"
@@ -62,8 +119,8 @@ const onSubmit = (data) => {
             <div className="singleForm">
               <label>Management Description </label>
               <input
-               {...register("description", { required: true })}
-                name="description"
+                {...register("managmentdescription", { required: true })}
+                name="managmentdescription"
                 placeholder="Management Description  "
                 type="text"
                 className="inputField"
@@ -73,7 +130,7 @@ const onSubmit = (data) => {
             <div className="singleForm">
               <label>Mission Description </label>
               <input
-                  {...register("missionDescription", { required: true })}
+                {...register("missionDescription", { required: true })}
                 name="missionDescription"
                 placeholder="Mission Description "
                 type="text"
@@ -85,7 +142,7 @@ const onSubmit = (data) => {
             <div className="singleForm">
               <label>Vission Descripton </label>
               <input
-              {...register("vissionDescription", { required: true })}
+                {...register("vissionDescription", { required: true })}
                 name="vissionDescription"
                 placeholder="Vission Descripton "
                 type="text"
@@ -96,7 +153,7 @@ const onSubmit = (data) => {
             <div className="singleForm">
               <label>Team Name </label>
               <input
-              {...register("teamName", { required: true })}
+                {...register("teamName", { required: true })}
                 name="teamName"
                 placeholder="Team Name "
                 type="text"
@@ -107,7 +164,7 @@ const onSubmit = (data) => {
             <div className="singleForm">
               <label>Team Position </label>
               <input
-               {...register("teamPosition", { required: true })}
+                {...register("teamPosition", { required: true })}
                 name="teamPosition"
                 placeholder="Team Position "
                 type="text"
@@ -118,7 +175,7 @@ const onSubmit = (data) => {
             <div className="singleForm">
               <label>Team Description </label>
               <input
-               {...register("teamDescriptions", { required: true })}
+                {...register("teamDescriptions", { required: true })}
                 name="teamDescriptions"
                 placeholder="Team Description  "
                 type="text"
@@ -129,8 +186,8 @@ const onSubmit = (data) => {
             <div className="singleForm">
               <label>Image Upload </label>
               <input
-               {...register("photo", { required: true })}
-               name='photo'
+                {...register("image", { required: true })}
+                name='image'
                 type="file"
                 multiple={true}
                 accept="image/*"
@@ -138,13 +195,13 @@ const onSubmit = (data) => {
                 className="file-input file-input-bordered  w-full "
                 autoComplete="off"
               />
-          
+
             </div>
             <div className="singleForm">
               <label> Description </label>
               <textarea
-               {...register("message", { required: true })}
-                name="message"
+                {...register("description", { required: true })}
+                name="description"
                 placeholder="Description"
                 id=""
                 cols="30"

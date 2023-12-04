@@ -7,7 +7,6 @@ const Services = () => {
 const [singleservices] = usePopularServices()
 const category = singleservices.filter(item=> item === "Development")
 
-  
   // const cardData = [
   //   {
   //     id: 1,
@@ -82,7 +81,7 @@ const category = singleservices.filter(item=> item === "Development")
                       <div className="cards-back-content md:px-3 text-center">
                         <b className="block"> {card.title}</b>
                         <small className="my-1 md:my-3">
-                         {card.subtitle}
+                         {card.subtitle.slice(0, 80)}...
                         </small>
                         <div className="flex items-center justify-center">
                           <span>Read More </span><small><FaArrowRight/></small>

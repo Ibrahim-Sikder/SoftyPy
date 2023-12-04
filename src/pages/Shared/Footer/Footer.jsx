@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h3 className="text-xl font-bold text-[#FF5400] mb-3">Services </h3>        
+         <Link to='/services'> <h3 className="text-xl font-bold text-[#FF5400] mb-3">Services </h3></Link>        
           <p>Web & APP Development</p>
           <p>ERP Solutions</p>
           <p>UI/UX Design</p>

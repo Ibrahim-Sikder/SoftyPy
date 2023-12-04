@@ -1,15 +1,12 @@
 import "./About.css";
 import team from "../../../public/assets/team6.jpeg";
 import team2 from "../../../public/assets/team2.jpg";
-import team3 from "../../../public/assets/team3.avif";
-import team4 from "../../../public/assets/team4.jpg";
 import team5 from "../../../public/assets/team5.jpg";
 import team6 from "../../../public/assets/team8.jpeg";
 import team7 from "../../../public/assets/team10.jpeg";
 import team8 from "../../../public/assets/team11.jpeg";
 import team9 from "../../../public/assets/team9.jpeg";
 import team14 from "../../../public/assets/team13.jpg";
-import hero from "../../../public/assets/hero.png";
 import { FaArrowRight } from "react-icons/fa";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import { useRef } from "react";
@@ -184,15 +181,6 @@ const About = () => {
               </div>
               <div className="team-anim--photo -pos-8 -back"></div>
               <div className="team-anim--dec -dec-1"></div>
-              <svg className="team-anim--dec -dec-2">
-                <use xlink:href="#svg-circle-lines"></use>
-              </svg>
-              <svg className="team-anim--dec -dec-3">
-                <use xlink:href="#svg-circle-lines"></use>
-              </svg>
-              <svg className="team-anim--dec -dec-4">
-                <use xlink:href="#svg-circle-lines"></use>
-              </svg>
               <div
                 className="team-anim--line aos-init aos-animate"
                 data-aos="fade-up"

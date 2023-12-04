@@ -1,4 +1,4 @@
-import { FaStreetView, FaEnvelopeOpenText } from "react-icons/fa";
+import { FaStreetView } from "react-icons/fa";
 import img from "../../../public/assets/saif.jpeg";
 import img2 from "../../../public/assets/team11.jpeg";
 import img3 from "../../../public/assets/team9.jpeg";

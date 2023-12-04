@@ -1,15 +1,8 @@
 import React, { useEffect } from "react";
 import {
-  FaHouseDamage,
-  FaGripHorizontal,
   FaChartLine,
-  FaBookmark,
   FaHandHoldingUsd,
-  FaUserAlt,
-  FaScribd,
-  FaSearch,
   FaUsers,
-  FaStripeS,
 } from "react-icons/fa";
 import {
   ComposedChart,
