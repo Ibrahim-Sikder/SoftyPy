@@ -1,13 +1,14 @@
 import "./HeroSection.css";
 import hero from "../../../../public/assets/hero.png";
 import NavBar from "../../../pages/Shared/NavBar/NavBar";
+import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <div>
       <div className="header">
         <div className="navsBarWrap">
-        <NavBar/>
-        
+          <NavBar />
+
           <div className="header-content">
             <div className="right-side">
               <img src={hero} alt="hero" />
@@ -21,7 +22,7 @@ const HeroSection = () => {
                 and reach their target audience with our data-driven approach to
                 digital marketing.
               </p>
-              <button className="ExploreBtn"> Explore Us </button>
+              <Link to='/contact'><button className="ExploreBtn"> Explore Us </button></Link>
             </div>
           </div>
         </div>

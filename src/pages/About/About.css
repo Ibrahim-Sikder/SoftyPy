@@ -274,7 +274,13 @@ img {
     padding-right: 40px;
 }
 .aboutLeftContainer {
-  left: 46px;
+  left: 46px !important;
+}
+.mission {
+  padding: 0 20px;
+}
+.aboutRightContainer {
+  left: 10px !important;
 }
 }
 

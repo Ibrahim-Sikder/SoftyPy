@@ -107,7 +107,7 @@ export default function Review() {
                 <FaQuoteLeft className="leftQoute" />
                 <p className="text-xl">
                   SOFTYPY is providing a valuable service to businesses in
-                  today's fast-paced and technology-driven world. The team's
+                  today is fast-paced and technology-driven world. The team 
                   expertise in digital marketing is helping companies reach
                   their target audience, increase brand awareness, drive traffic
                   to their website, and generate leads and sales.

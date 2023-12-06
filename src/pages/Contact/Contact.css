@@ -224,7 +224,7 @@
   .formControl .inputField,
   .formControl textarea,
   .sendMessageBtn {
-    width: 90%;
+    width: 100%;
   }
   .contactHeroSection::after{
     clip-path: polygon(100% 100%, 0 100%, 100% 100%);
