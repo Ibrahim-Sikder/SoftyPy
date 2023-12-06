@@ -178,7 +178,7 @@
     }
     .leftContainer span,
     .rightContainer span {
-      left: 10px;
+      left: -25px;
     }
     .leftContentArrow,
     .rightContentArrow {

@@ -124,12 +124,17 @@ object-fit: cover;
     }
 
  }
+ 
  @media only screen and (max-width:768px){
-    .ourServicesWrap {
-        grid-template-columns: auto;
+    .ourServicesWrap{
+        grid-template-columns: 1fr;
     }
- }
+    .ourServiceLeftSide{
+        order: 1;
+        margin-top:15px;
+    }
 
+ }
  @media only screen and (max-width:500px){
     .ourServiceLeftSide {
         width: 100%;
