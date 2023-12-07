@@ -2,10 +2,24 @@ import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 import "./Services.css";
 import { FaArrowRight } from "react-icons/fa";
 import usePopularServices from "../../../hooks/usePopularServices";
+import { Link } from "react-router-dom";
 
 const Services = () => {
 const [singleservices] = usePopularServices()
-const category = singleservices.filter(item=> item === "Development")
+
+const handleDetails = ()=>{
+  fetch('',{
+    method: "POST",
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify()
+  })
+  .then(res=>res.json())
+  .then(data=>{
+    console.log(data)
+  })
+}
 
   // const cardData = [
   //   {
@@ -83,9 +97,10 @@ const category = singleservices.filter(item=> item === "Development")
                         <small className="my-1 md:my-3">
                          {card.subtitle.slice(0, 80)}...
                         </small>
-                        <div className="flex items-center justify-center">
-                          <span>Read More </span><small><FaArrowRight/></small>
+                        <div onClick={handleDetails}>
+                          <Link to={`singleService/${card._id}`}> <div className="flex items-center justify-center"> <span>Read More </span><small><FaArrowRight/></small></div></Link>
                           </div>
+                          {/* type=${packageType} */}
                       </div>
                     </div>
                   </div>

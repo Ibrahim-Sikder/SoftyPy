@@ -29,6 +29,7 @@ import SingleServices from "../pages/Dashboard/SingleServices/SingleServices";
 import AddSingleServices from "../pages/Dashboard/SingleServices/AddSingleServices";
 import UpdateSingleServices from "../pages/Dashboard/SingleServices/UpdateSingleServices";
 import CustomerOrderList from "../pages/Dashboard/CustomerOrder/CustomerOrderList";
+import Faq from "../pages/FAQ/Faq";
 
 
 
@@ -51,9 +52,13 @@ export const router = createBrowserRouter([
         path: '/portfolio',
         element: <Portfolio />
       },
+      // {
+      //   path: '/singleService',
+      //   element: <SingleService />
+      // },
       {
-        path: 'services/:id',
-        element: <Services />,
+        path: '/singleService/:id',
+        element: <SingleService />,
         loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
       },
       {
@@ -69,10 +74,6 @@ export const router = createBrowserRouter([
         element: <Contact />
       },
       {
-        path: '/singleService',
-        element: <SingleService />
-      },
-      {
         path: '/signup',
         element: <Signup />
       },
@@ -80,6 +81,10 @@ export const router = createBrowserRouter([
         path: '/login',
         element: <Login />
       },
+      {
+        path: '/faq',
+        element: <Faq/>
+      }
 
     ],
 
