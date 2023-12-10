@@ -4,16 +4,19 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import WhyChoosSe from "../Home/ChoosUs/WhyChoosSe";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import Products from "../../components/MoreProducts/Products";
 import NavBar from "../Shared/NavBar/NavBar";
 AOS.init();
 
+
 const SingleService = () => {
+  const services = useLoaderData()
   const [checked, setChecked] = useState([1]);
   const [tabIndex, setTabIndex] = useState(0);
+  console.log(services)
   const handleToggle = (value) => () => {
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
@@ -39,12 +42,14 @@ const SingleService = () => {
         <NavBar/>
         
         <div className="servicesContents">
-          <div>
+          <div className="singleServicessContent">
           <h2 className="text-2xl md:text-5xl font-bold">
-              One-Stop Shop for All Your Online Needs{" "}
+            {services.title}
+              {/* One-Stop Shop for All Your Online Needs{" "} */}
             </h2>
-            <h3 className="text-xl md:text-2xl font-bold mt-5">
-              Best Web Development Company In Bangladesh
+            <h3 className="text-xl  md:text-2xl font-bold mt-5">
+              {/* Best Web Development Company In Bangladesh */}
+              {services.subtitle}
             </h3>
           </div>
         </div>
@@ -55,7 +60,7 @@ const SingleService = () => {
         <div className="ecommerServices">
           <div className="leftSideServices">
             <h3 className="text-4xl font-bold mb-3">
-              Why Need E-commerce Website?
+              Why Need {services.title}?
             </h3>
             <div className="my-2">
               <b>Global Reach:</b>

@@ -24,11 +24,11 @@ const Products = () => {
       name: "Digital Marketing",
       desc:"SoftyPy drives business growth with data-driven digital marketing strategies, elevating your online presence and engaging target audiences for lasting results."
     },
-    {
-      id: 5,
-      name: "SEO ",
-      desc: 'SoftyPy SEO services can build your high rankings and achieving your organic traffic & improve search engine result.'
-    },
+    // {
+    //   id: 5,
+    //   name: "SEO ",
+    //   desc: 'SoftyPy SEO services can build your high rankings and achieving your organic traffic & improve search engine result.'
+    // },
     
   ];
   return (

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Services = () => {
 const [singleservices] = usePopularServices()
-
+console.log(singleservices)
 const handleDetails = ()=>{
   fetch('',{
     method: "POST",
